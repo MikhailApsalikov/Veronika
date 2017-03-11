@@ -43,6 +43,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -152,6 +160,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +187,18 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Beskova.Ontology.Entities\Beskova.Ontology.Entities.csproj">
+      <Project>{776891B0-3690-41D8-B7B1-57AE7E9B834C}</Project>
+      <Name>Beskova.Ontology.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beskova.Ontology.Interfaces\Beskova.Ontology.Interfaces.csproj">
+      <Project>{C389B2A7-391E-48AE-9AD8-A4A7A3F171F7}</Project>
+      <Name>Beskova.Ontology.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beskova.Ontology.Models\Beskova.Ontology.Models.csproj">
+      <Project>{08EA75B7-13DB-4797-8F28-E7C602AE82AC}</Project>
+      <Name>Beskova.Ontology.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Beskova.Ontology.Repositories\Beskova.Ontology.Repositories.csproj">
       <Project>{5fd9f660-00fa-4b8f-a832-3001cf74c355}</Project>
       <Name>Beskova.Ontology.Repositories</Name>

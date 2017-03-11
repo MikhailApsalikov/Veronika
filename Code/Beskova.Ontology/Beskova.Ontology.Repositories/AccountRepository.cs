@@ -1,6 +1,5 @@
 ﻿namespace Beskova.Ontology.Repositories
 {
-	using System;
 	using System.Data.Entity;
 	using System.Linq;
 	using Entities;
