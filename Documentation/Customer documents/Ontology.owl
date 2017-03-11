@@ -1,0 +1,1538 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2016/7/strUniversity"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2016/7/strUniversity">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2016/7/strUniversity"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://kent.zpr.fer.hr:8080/educationalProgram/vocab/sisvu.rdf</Import>
+    <Import>http://localhost:3030/speciality-vocabulary/</Import>
+    <Import>http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Онтология &quot;Структура университета&quot; описывает подразделения, входящие в университет, и работников</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AcademicTitle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BranchOfScience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BranchOffice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Center"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#College"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Employee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Faculty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Museum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScientificSpecialty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StudentClub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TradeUnion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UGNS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsDocent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#candidateOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connectedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doctorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAdministrativePosition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDean"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeputyDean"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeputyDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDocent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHeadDepartament"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProfessor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includeDepartament"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includeInUniversity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAssistant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDean"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDeputyDean"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDeputyDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDirector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHeadOfDepartment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProfessor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSeniorLecturer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#match"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOfFaculty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOfInstitute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOfUGNS"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOfUniversity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#titleRelate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Docent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Professor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Д_212.242.02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Доцент"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#МФПИТ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ПИТ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Приборостроение"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Профессор"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#СГТУ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Технические_науки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Физико-математические_науки"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ЭТИ"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://localhost:3030/speciality-vocabulary/ScientificSpeciality"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/vocab/aiiso/schema#Faculty"/>
+        <Class IRI="#Faculty"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/vocab/aiiso/schema#Institution"/>
+        <Class IRI="#Institute"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.ravendesk.org/univ-ont#Division"/>
+        <Class IRI="#Department"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AcademicTitle"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Professor"/>
+            <NamedIndividual IRI="#Docent"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Employee"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Unit"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AcademicTitle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#titleRelate"/>
+            <Class IRI="#Employee"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BranchOfScience"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#match"/>
+            <Class IRI="#ScientificSpecialty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BranchOffice"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Center"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Center"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#College"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#College"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasHeadDepartament"/>
+            <Class IRI="#Employee"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfFaculty"/>
+            <Class IRI="#Faculty"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfInstitute"/>
+            <Class IRI="#Institute"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasDocent"/>
+            <Class IRI="#Employee"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Department"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasProfessor"/>
+            <Class IRI="#Employee"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#IsDocent"/>
+            <Class IRI="#Department"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasTitle"/>
+            <Class IRI="#AcademicTitle"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isAssistant"/>
+            <Class IRI="#Department"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isProfessor"/>
+            <Class IRI="#Department"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#isDean"/>
+            <Class IRI="#Faculty"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#isDeputyDean"/>
+            <Class IRI="#Faculty"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#isDeputyDirector"/>
+            <Class IRI="#Institute"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#isDirector"/>
+            <Class IRI="#Institute"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Employee"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#isHeadOfDepartment"/>
+            <Class IRI="#Department"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDeputyDean"/>
+            <Class IRI="#Employee"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeDepartament"/>
+            <Class IRI="#Department"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDean"/>
+            <Class IRI="#Employee"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institute"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institute"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDeputyDirector"/>
+            <Class IRI="#Employee"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institute"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeDepartament"/>
+            <Class IRI="#Department"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institute"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDirector"/>
+            <Class IRI="#Employee"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institute"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Library"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Library"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museum"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Museum"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScientificSpecialty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#match"/>
+            <Class IRI="#BranchOfScience"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScientificSpecialty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOfUGNS"/>
+            <Class IRI="#UGNS"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudentClub"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StudentClub"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TradeUnion"/>
+        <Class IRI="#Unit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TradeUnion"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#partOfUniversity"/>
+            <Class IRI="#University"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UGNS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeScientificSpeciality"/>
+            <Class IRI="#ScientificSpecialty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#BranchOffice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#Center"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#College"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#Faculty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#Institute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#Museum"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#StudentClub"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#TradeUnion"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasRector"/>
+            <Class IRI="#Employee"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#includeInUniversity"/>
+            <Class IRI="#Library"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AcademicTitle"/>
+        <Class IRI="#Employee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Center"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#College"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Department"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Faculty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Institute"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Library"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#Museum"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#StudentClub"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BranchOffice"/>
+        <Class IRI="#TradeUnion"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Employee"/>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Employee"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#dissertationCouncil"/>
+        <NamedIndividual IRI="#Д_212.242.02"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Employee"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcademicTitle"/>
+        <NamedIndividual IRI="#Доцент"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Institute"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UGNS"/>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UGNS"/>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Faculty"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#ПИТ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#Приборостроение"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcademicTitle"/>
+        <NamedIndividual IRI="#Профессор"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#СГТУ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScientificSpecialty"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BranchOfScience"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BranchOfScience"/>
+        <NamedIndividual IRI="#Физико-математические_науки"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BranchOffice"/>
+        <NamedIndividual IRI="#ЭТИ"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Docent"/>
+        <NamedIndividual IRI="#Professor"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#doctorOf"/>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#doctorOf"/>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProfessor"/>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+        <NamedIndividual IRI="#Приборостроение"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#doctorOf"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDirector"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isProfessor"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#connectedWith"/>
+        <NamedIndividual IRI="#Д_212.242.02"/>
+        <NamedIndividual IRI="http://localhost:3030/speciality-vocabulary/lists/3/scientificspeciality/05.02.08/4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#createdIn"/>
+        <NamedIndividual IRI="#Д_212.242.02"/>
+        <NamedIndividual IRI="#СГТУ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsDocent"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+        <NamedIndividual IRI="#ПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDean"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+        <NamedIndividual IRI="#МФПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHeadOfDepartment"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+        <NamedIndividual IRI="#ПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDirector"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+        <NamedIndividual IRI="#Приборостроение"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfUniversity"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+        <NamedIndividual IRI="#СГТУ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasProfessor"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfInstitute"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+        <NamedIndividual IRI="#ПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfUniversity"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+        <NamedIndividual IRI="#СГТУ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDocent"/>
+        <NamedIndividual IRI="#ПИТ"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfFaculty"/>
+        <NamedIndividual IRI="#ПИТ"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfInstitute"/>
+        <NamedIndividual IRI="#Приборостроение"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeInUniversity"/>
+        <NamedIndividual IRI="#СГТУ"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeInUniversity"/>
+        <NamedIndividual IRI="#СГТУ"/>
+        <NamedIndividual IRI="#ЭТИ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includeInUniversity"/>
+        <NamedIndividual IRI="#СГТУ"/>
+        <NamedIndividual IRI="#ПИТ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#match"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfUGNS"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfUGNS"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#match"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#match"/>
+        <NamedIndividual IRI="#Технические_науки"/>
+        <NamedIndividual IRI="#Физико-математические_науки"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#partOfUniversity"/>
+        <NamedIndividual IRI="#ЭТИ"/>
+        <NamedIndividual IRI="#СГТУ"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Алешкин_Валерий_Викторович"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Алешкин Валерий Викторович</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Бровкова_Марина_Борисовна"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Бровкова Марина Борисовна</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCode"/>
+        <NamedIndividual IRI="#Д_212.242.02"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Д 212.242.02</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Долинина_О.Н."/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Долинина Ольга Николаевна</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Институт_электронной_техники_и_машиностроения"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Институт электронной техники и машиностроения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCode"/>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">09.00.00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Информатика_и_вычислительная_техника"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Информатика и
+вычислительная
+техника</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Информационная_безопасность_автоматизированных_систем"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Информационная безопасность автоматизированных систем</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCode"/>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">02.00.00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Компьютерные_и_информационные_науки"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Компьютерные и информационные науки</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#МФПИТ"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">МФПИТ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#ПИТ"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Прикландых информационных технологий</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Приборостроение"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> Приборостроение</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#СГТУ"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Саратовский Государственный Технический Университет им. Ю.А. Гагарина</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCode"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">05.13.01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Системный_анализ,_управление_и_обработка_информации"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Системный анализ, управление и обработка информации</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#ЭТИ"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Энгельский Технологический Институт</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRector"/>
+        <ObjectProperty IRI="#hasAdministrativePosition"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDean"/>
+        <ObjectProperty IRI="#hasDean"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDeputyDirector"/>
+        <ObjectProperty IRI="#isDeputyDirector"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDirector"/>
+        <ObjectProperty IRI="#hasDirector"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isHeadOfDepartment"/>
+        <ObjectProperty IRI="#hasHeadDepartament"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasIn"/>
+        <ObjectProperty IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#createdIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasRector"/>
+        <ObjectProperty IRI="#isRector"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasTitle"/>
+        <ObjectProperty IRI="#titleRelate"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#partOfUGNS"/>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDean"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDirector"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasHeadDepartament"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasRector"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#match"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsDocent"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#candidateOf"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#doctorOf"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAdministrativePosition"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDean"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeputyDean"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeputyDirector"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Institute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDocent"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHeadDepartament"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProfessor"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRector"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTitle"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <Class IRI="#Institute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includeInUniversity"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+        <Class IRI="#UGNS"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAssistant"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDean"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDeputyDean"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDeputyDirector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDirector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isHeadOfDepartment"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isProfessor"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSeniorLecturer"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#match"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOfFaculty"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOfInstitute"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOfUGNS"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#partOfUniversity"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#titleRelate"/>
+        <Class IRI="#AcademicTitle"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsDocent"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#candidateOf"/>
+        <Class IRI="#BranchOfScience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#candidateOf"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#doctorOf"/>
+        <Class IRI="#BranchOfScience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#doctorOf"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAdministrativePosition"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDean"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeputyDean"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeputyDirector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDirector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDocent"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHeadDepartament"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProfessor"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRector"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTitle"/>
+        <Class IRI="#AcademicTitle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includeDepartament"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includeInUniversity"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includeScientificSpeciality"/>
+        <Class IRI="#ScientificSpecialty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAssistant"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDean"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDeputyDean"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDeputyDirector"/>
+        <Class IRI="#Institute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDirector"/>
+        <Class IRI="#Institute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isHeadOfDepartment"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isProfessor"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRector"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSeniorLecturer"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#match"/>
+        <Class IRI="#BranchOfScience"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOfFaculty"/>
+        <Class IRI="#Faculty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOfInstitute"/>
+        <Class IRI="#Institute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOfUGNS"/>
+        <Class IRI="#UGNS"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOfUniversity"/>
+        <Class IRI="#University"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#titleRelate"/>
+        <Class IRI="#Employee"/>
+    </ObjectPropertyRange>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://localhost:3030/speciality-vocabulary/hasCode"/>
+        <DataProperty IRI="#hasCode"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://localhost:3030/speciality-vocabulary/hasCode"/>
+        <DataProperty IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#hasCode"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://www.geonames.org/ontology#name"/>
+        <DataProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#hasName"/>
+    </EquivalentDataProperties>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCode"/>
+    </FunctionalDataProperty>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCode"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AcademicTitle</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Учёное звание - квалификационная система в высшей школе и науке, позволяющая ранжировать научных и научно-педагогических сотрудников на отдельных ступенях академической карьеры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BranchOfScience</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Область науки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BranchOffice</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Филиал университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Center</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Центр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#College</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Колледж при университете</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Department</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Кафедра</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Employee</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Работник университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Faculty</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Факультет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Institute</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Институт</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IsDocent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является доцентом на кафедре</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Library</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Библиотека университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Museum</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Музей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScientificSpecialty</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Научные специальности</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StudentClub</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Студенческий клуб</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TradeUnion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Профсоюз</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UGNS</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Укрупненные группы специальностей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Unit</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Подразделения университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#University</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Университет</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#candidateOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является кандидатом наук</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#doctorOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является доктором наук</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет главу факультета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDeputyDean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет зам.декана</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDeputyDirector</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет зам.директора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDirector</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет главу института</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasHeadDepartament</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет главу кафедры</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRector</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Имеет главу университета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includeDepartament</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Включает в себя кафедру</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includeInUniversity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Включает в себя подразделение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includeScientificSpeciality</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Включает в себя научную специальность</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAssistant</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является ассистентом на кафедре</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является деканом факультета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDeputyDean</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">является зам.декана факультета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDeputyDirector</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является зам.дироктора института</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDirector</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является директором института</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isHeadOfDepartment</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является заведующим кафедрой</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isProfessor</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является профессором на кафедре</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfFaculty</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является частью факультета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfInstitute</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является частью института</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfUGNS</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является частью области науки</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfUniversity</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Является частью университета</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
