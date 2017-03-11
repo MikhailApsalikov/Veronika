@@ -7,7 +7,11 @@
 	{
 		public string Name { get; set; }
 
+		public string Password { get; set; }
+
 		public AccountRole Role { get; set; }
 		public int Id { get; set; }
+
+		public bool IsRemoved { get; set; }
 	}
 }
