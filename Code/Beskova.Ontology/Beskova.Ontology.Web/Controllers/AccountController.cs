@@ -1,6 +1,5 @@
 ﻿namespace Beskova.Ontology.Web.Controllers
 {
-	using System;
 	using Entities;
 	using Interfaces;
 	using Models;
@@ -16,17 +15,27 @@
 
 		protected override AccountModel MapEntityToModel(Account entity)
 		{
-			throw new NotImplementedException();
+			return new AccountModel
+			{
+				Id = entity.Id,
+				Name = entity.Name,
+				Role = entity.Role
+			};
 		}
 
 		protected override Account MapModelToEntity(AccountModel model)
 		{
-			throw new NotImplementedException();
+			return new Account
+			{
+				Id = model.Id,
+				Name = model.Name,
+				Role = model.Role
+			};
 		}
 
 		protected override AccountModel MapEntityToShortModel(Account entity)
 		{
-			throw new NotImplementedException();
+			return MapEntityToModel(entity);
 		}
 	}
 }
