@@ -1,18 +1,40 @@
 ﻿namespace Beskova.Ontology.Web.Controllers
 {
 	using System.Web.Mvc;
-
-	[Authorize]
+	
 	public class HomeController : Controller
 	{
-		
-		public ActionResult Index()
+		public ViewResult Specialties()
 		{
 			return View();
 		}
 
-		[AllowAnonymous]
-		public ActionResult Login()
+		public ViewResult Specialty()
+		{
+			return View();
+		}
+
+		public ViewResult SpecialtyEdit()
+		{
+			return View();
+		}
+
+		public ViewResult Univercities()
+		{
+			return View();
+		}
+
+		public ViewResult Univercity()
+		{
+			return View();
+		}
+
+		public ViewResult Login()
+		{
+			return View();
+		}
+
+		public ViewResult UserManagement()
 		{
 			return View();
 		}

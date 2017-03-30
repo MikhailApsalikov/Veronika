@@ -68,12 +68,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountLoginValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Beskova.Ontology.Entities\Beskova.Ontology.Entities.csproj">
       <Project>{776891b0-3690-41d8-b7b1-57ae7e9b834c}</Project>
       <Name>Beskova.Ontology.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beskova.Ontology.Models\Beskova.Ontology.Models.csproj">
+      <Project>{08EA75B7-13DB-4797-8F28-E7C602AE82AC}</Project>
+      <Name>Beskova.Ontology.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
