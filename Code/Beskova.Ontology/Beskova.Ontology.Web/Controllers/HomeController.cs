@@ -4,7 +4,7 @@
 	
 	public class HomeController : Controller
 	{
-		public ViewResult Specialties()
+		public ViewResult Specialties() 
 		{
 			return View();
 		}

@@ -3,12 +3,12 @@
 	var angular = window.angular;
 	angular
       .module('APP')
-      .controller('errorController', ['$scope', '$uibModalInstance', 'errorsData', errorController]);
+      .controller('errorController', ['$scope', 'errorsData', errorController]);
 
-	function errorController($scope, $uibModalInstance, errorsData) {
+	function errorController($scope, errorsData) {
 		$scope.errors = errorsData;
 		$scope.ok = function () {
-			$uibModalInstance.close();
+			//$uibModalInstance.close();
 		};
 
 		function activate() {

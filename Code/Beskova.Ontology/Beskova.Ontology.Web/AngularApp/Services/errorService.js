@@ -3,22 +3,26 @@
 	var angular = window.angular;
 	angular
 		.module("APP")
-		.service("errorService", ['$uibModal', errorService]);
+		.service("errorService", ['$mdDialog', errorService]);
 
-	function errorService($uibModal) {
+	function errorToString() {
+
+	}
+
+	function errorService($mdDialog) {
 		return {
 			open: function (errors, then) {
-				var modalInstance = $uibModal.open({
-					ariaLabelledBy: 'modal-title',
-					ariaDescribedBy: 'modal-body',
-					templateUrl: 'error.html',
+				$mdDialog.show({
 					controller: 'errorController',
+					templateUrl: '/templates/error.html',
+					parent: angular.element(document.body),
+					clickOutsideToClose: true,
 					resolve: {
 						errorsData: function () {
 							return errors;
 						}
 					}
-				});
+				}).then(then, function () { });
 
 				modalInstance.result.then(then, function () { });
 			}
