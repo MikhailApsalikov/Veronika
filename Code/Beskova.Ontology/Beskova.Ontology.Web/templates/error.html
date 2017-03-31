@@ -1,1 +1,18 @@
-﻿<div>123</div>
+﻿<md-dialog>
+	<md-dialog-content class="error-container">
+		<h2 class="error-header">Ошибка</h2>
+		<div>
+			<ul>
+				<li ng-repeat="error in errors track by $index">
+					<span ng-if="!!error.FieldName">Ошибка в поле "{{error.FieldName}}": {{error.Text}}</span>
+					<span ng-if="!error.FieldName">{{error.Text}}</span>
+				</li>
+			</ul>
+		</div>
+	</md-dialog-content>
+	<md-dialog-actions class="error-container">
+		<md-button class="md-warn md-raised" type="button" ng-click="ok()" md-autofocus>
+			ОК
+		</md-button>
+	</md-dialog-actions>
+</md-dialog>

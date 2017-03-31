@@ -5,3 +5,12 @@
 .italic {
 	font-style: italic;
 }
+
+.error-header {
+	text-align: center;
+}
+
+.error-container {
+	margin: 20px 50px;
+	width: 450px;
+}

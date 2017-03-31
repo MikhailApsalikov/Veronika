@@ -5,10 +5,6 @@
 		.module("APP")
 		.service("errorService", ['$mdDialog', errorService]);
 
-	function errorToString() {
-
-	}
-
 	function errorService($mdDialog) {
 		return {
 			open: function (errors, then) {
@@ -23,8 +19,6 @@
 						}
 					}
 				}).then(then, function () { });
-
-				modalInstance.result.then(then, function () { });
 			}
 		};
 	}
