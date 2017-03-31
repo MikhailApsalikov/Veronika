@@ -1,0 +1,14 @@
+﻿.login {
+	width: 350px;
+	margin: 220px auto;
+}
+
+h1 {
+	margin-bottom: 45px;
+	width: 100%;
+	text-align: center;
+}
+
+.submit-button {
+	width: 100%;
+}

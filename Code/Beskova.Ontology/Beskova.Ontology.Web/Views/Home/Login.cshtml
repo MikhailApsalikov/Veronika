@@ -1,14 +1,27 @@
 ﻿@{
-	ViewBag.Title = "Авторизация";
+	ViewBag.Title = "Аутентификация";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section css{
-
+	<link href="~/Content/login.css" rel="stylesheet" />
 }
 
 @section scripts{
-	
+
+	<script src="~/AngularApp/Controllers/loginController.js"></script>
 }
 
-<div></div>
+
+<div class="login" ng-controller="loginController">
+	<h1>Аутентификация</h1>
+	<md-input-container class="md-block">
+		<label>Имя пользователя</label>
+		<input type="text" ng-model="login">
+	</md-input-container>
+	<md-input-container class="md-block">
+		<label>Пароль</label>
+		<input type="password" ng-model="password">
+	</md-input-container>
+	<md-button class="md-primary md-raised md-block submit-button" ng-click="submit()">Вход</md-button>
+</div>
