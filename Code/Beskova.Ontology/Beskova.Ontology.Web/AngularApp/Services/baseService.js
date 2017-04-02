@@ -34,11 +34,12 @@
 					method: "POST",
 					data: entity
 				}).then(function (responce) {
-					if (!responce.data.IsValid) {
-						errorService.open(responce.data.Errors);
+					return responce.data;
+				}, function (responce) {
+					if (responce.data.isValid === false) {
+						errorService.open(responce.data.errors);
 						return;
 					}
-					return responce.data;
 				});
 			},
 			update: function (controllerName, id, entity) {
@@ -51,11 +52,12 @@
 						id: id
 					}
 				}).then(function (responce) {
-					if (!responce.data.IsValid) {
-						errorService.open(responce.data.Errors);
+					return responce.data;
+				}, function (responce) {
+					if (responce.data.isValid === false) {
+						errorService.open(responce.data.errors);
 						return;
 					}
-					return responce.data;
 				});
 			},
 			remove: function (controllerName, id) {

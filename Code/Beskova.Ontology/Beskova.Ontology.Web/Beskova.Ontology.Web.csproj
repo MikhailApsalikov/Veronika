@@ -185,13 +185,19 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\Controllers\errorController.js" />
     <Content Include="AngularApp\Controllers\loginController.js" />
+    <Content Include="AngularApp\Controllers\userCreateController.js" />
+    <Content Include="AngularApp\Controllers\userManagementController.js" />
     <Content Include="AngularApp\Controllers\userOptionsController.js" />
     <Content Include="AngularApp\Services\baseService.js" />
     <Content Include="AngularApp\Services\errorService.js" />
     <Content Include="AngularApp\Services\loginService.js" />
+    <Content Include="AngularApp\Services\modalController.js" />
+    <Content Include="Content\grid.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\user-management.css" />
     <Content Include="Global.asax" />
+    <Content Include="templates\create-user.html" />
     <Content Include="templates\error.html" />
     <Content Include="Web.config" />
   </ItemGroup>

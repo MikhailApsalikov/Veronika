@@ -14,3 +14,13 @@
 	margin: 20px 50px;
 	width: 450px;
 }
+
+.authorization-error {
+	color: red;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.pull-right {
+	float: right;
+}

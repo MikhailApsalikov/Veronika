@@ -4,11 +4,82 @@
 }
 
 @section css{
-
+<link href="~/Content/user-management.css" rel="stylesheet" />
 }
 
 @section scripts{
-
+<script src="~/AngularApp/Controllers/userManagementController.js"></script>
+<script src="~/AngularApp/Controllers/userCreateController.js"></script>
 }
 
-<h1>Страница находится в разработке!</h1>
+<div ng-controller="userManagementController">
+	<div ng-if="isPageVisible()">
+		<md-button class="md-fab pull-right" ng-click="create()" aria-label="Create user">
+			<md-icon md-svg-src="~/node_modules/material-design-icons/content/svg/production/ic_add_24px.svg"></md-icon>
+		</md-button>
+		<h1>Управление пользователями</h1>
+		<div ng-if="!isLoaded" layout="row" layout-align="center">
+			<md-progress-circular class="progress-container grid-progress-container" md-mode="indeterminate"></md-progress-circular>
+		</div>
+		<table ng-if="isLoaded" class="grid user-management-grid">
+			<thead class="header">
+			<tr class="item">
+				<th class="grid-item user-management-grid-id">
+					ID
+				</th>
+				<th class="grid-item user-management-grid-name">
+					Имя пользователя
+				</th>
+				<th class="grid-item user-management-grid-role">
+					Роль
+				</th>
+				<th class="grid-item user-management-grid-buttons"></th>
+			</tr>
+			</thead>
+			<tbody class="body">
+			<tr class="item" ng-repeat="account in data track by $index">
+				<th class="grid-item user-management-grid-id" ng-bind="account.Id"></th>
+				<th class="grid-item user-management-grid-name" ng-bind="account.Name"></th>
+
+				<th class="grid-item user-management-grid-role" ng-bind="userRoleString(account.Role)"></th>
+				<th class="grid-item user-management-grid-buttons" class="actions">
+					<md-button class="md-fab md-primary" ng-if="account.Role < 2" ng-click="up(account)" aria-label="Create user">
+						<md-icon md-svg-src="~/node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg"></md-icon>
+					</md-button>
+					<md-button class="md-fab md-primary" ng-if="account.Role > 0" ng-click="down(account)" aria-label="Create user">
+						<md-icon md-svg-src="~/node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg"></md-icon>
+					</md-button>
+					<md-button class="md-fab md-warn" ng-click="remove(account.Id)" aria-label="Create user">
+						<md-icon md-svg-src="~/node_modules/material-design-icons/action/svg/production/ic_delete_24px.svg"></md-icon>
+					</md-button>
+				</th>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-if="!isPageVisible()">
+		<h1 class="authorization-error">Страница недоступна для роли "{{role}}"</h1>
+	</div>
+
+	<script type="text/ng-template" id="create-user.html">
+		<div class="modal-header">
+			<h3 class="modal-title" id="modal-title">Создание нового пользователя</h3>
+		</div>
+		<div class="modal-body" id="modal-body">
+			<div class="form-group">
+				<label for="login">Имя пользователя</label>
+				<input type="text" class="form-control" id="login" placeholder="Имя пользователя" ng-model="login">
+			</div>
+			<div class="form-group">
+				<label for="password">Пароль</label>
+				<input type="password" class="form-control" id="password" placeholder="Пароль" ng-model="password">
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-default" type="button" ng-click="cancel()">Отмена</button>
+			<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+		</div>
+	</script>
+</div>
+
+

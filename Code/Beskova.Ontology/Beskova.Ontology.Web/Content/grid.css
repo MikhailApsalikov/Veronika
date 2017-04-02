@@ -1,0 +1,45 @@
+﻿.grid {
+	margin: 15px 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid black;
+	width: 100%;
+}
+
+	.grid td, .grid th {
+		border: 1px solid black;
+	}
+
+	.grid .progress-container {
+		zoom: 8;
+	}
+
+	.grid .grid-body {
+		width: 94%;
+		margin: 0 3% 50px;
+	}
+
+	.grid .grid-item {
+		text-align: center;
+	}
+
+	.grid .header .grid-item {
+		font-weight: bold;
+		height: 64px;
+		background-color: #3f51b5;
+		color: #FFFFFF;
+		padding-top: 18px;
+		cursor: default;
+	}
+
+	.grid .body .item {
+		cursor: pointer;
+	}
+
+		.grid .body .item:hover .grid-item {
+			background-color: rgba(50, 205, 50, 0.3);
+		}
+
+.grid-progress-container {
+	zoom: 4;
+}
