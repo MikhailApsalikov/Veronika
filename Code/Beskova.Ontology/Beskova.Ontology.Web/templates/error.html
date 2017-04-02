@@ -1,6 +1,6 @@
 ﻿<md-dialog>
-	<md-dialog-content class="error-container">
-		<h2 class="error-header">Ошибка</h2>
+	<md-dialog-content class="modal-container">
+		<h2 class="modal-header">Ошибка</h2>
 		<div>
 			<ul>
 				<li ng-repeat="error in errors track by $index">
@@ -10,7 +10,7 @@
 			</ul>
 		</div>
 	</md-dialog-content>
-	<md-dialog-actions class="error-container">
+	<md-dialog-actions class="modal-container">
 		<md-button class="md-warn md-raised" type="button" ng-click="ok()" md-autofocus>
 			ОК
 		</md-button>

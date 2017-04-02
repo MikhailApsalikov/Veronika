@@ -54,6 +54,10 @@
       <HintPath>..\packages\Selp.Repository.1.0.0.0\lib\net461\Selp.Repository.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Selp.Validator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selp.Validator.1.0.0.0\lib\net461\Selp.Validator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />

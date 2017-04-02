@@ -6,14 +6,19 @@
 	font-style: italic;
 }
 
-.error-header {
+.modal-header {
 	text-align: center;
 }
 
-.error-container {
+.modal-container {
 	margin: 20px 50px;
 	width: 450px;
 }
+
+	.modal-container md-input-container.md-block {
+		width: 95%;
+	}
+
 
 .authorization-error {
 	color: red;
