@@ -1,0 +1,15 @@
+1. Back-end - язык C#, платформа .NET:
+1) ASP.NET WebAPI 5.2.3 - фреймворк для веб-сервисов от Microsoft, с помощью него гоняем данные от сервера клиенту (Сервисы типа REST - https://en.wikipedia.org/wiki/Representational_state_transfer, формат JSON)
+2) ASP.NET MVC 5.2.3 - MVC фреймворк от Microsoft, с помощью него отдаем статичные файлы (HTML/CSS/JS/картинки итд) клиенту
+3) Entity Framework - ORM - библиотека (https://en.wikipedia.org/wiki/Object-relational_mapping) для удобной работы с БД
+4) Selp Framework - основной фрейворк бекенда, задает архитектуру и позволяет легко манипулировать сущностями в логике (CRUD-подход, шаблон проектирования "Repository")
+5) AutoMapper - библиотека для быстрой конвертации сущностей в модели и наоборот
+6) Newtonsoft.JSON - библиотека для работы с JSON данными (нужна для веб-сервисов)
+7) Unity - DI контейнер (https://en.wikipedia.org/wiki/Dependency_injection)
+
+2. Front-End:
+1) Angular.js - основная фреймворк фронтэнда, задает архитектуру
+2) Angular-material - дизайн в material-стиле задан именно им
+3) NPM -  для автоматической загрузки пакетов
+
+3. База - localdb (MSSQL Server 2014), генерируется автоматически из классов при помощи EntityFramework (см. п.1.3). Технология называется Entity Framework Code First.
