@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/давид/ontologies/2017/4/untitled-ontology-25"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/давид/ontologies/2017/4/untitled-ontology-25">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18</Import>
+    <Import>http://localhost:3030/speciality-vocabulary/</Import>
+    <Declaration>
+        <NamedIndividual IRI="#Федеральный_исследовательский_центр_питания,_биотехнологии_и_безопасности_пищи"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrderNumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associatedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#createdIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includedIn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Научно-исследовательский_институт_фундаментальной_и_клинической_иммунологии"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#dissertationCouncil"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#dissertationCouncil"/>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#Научно-исследовательский_институт_фундаментальной_и_клинической_иммунологии"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#Федеральный_исследовательский_центр_питания,_биотехнологии_и_безопасности_пищи"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includedIn"/>
+        <NamedIndividual IRI="http://localhost:3030/speciality-vocabulary/lists/3/scientificspeciality/14.03.09/4"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isIn"/>
+        <NamedIndividual IRI="http://localhost:3030/speciality-vocabulary/lists/3/scientificspeciality/14.03.09/4"/>
+        <NamedIndividual IRI="#Научно-исследовательский_институт_фундаментальной_и_клинической_иммунологии"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associatedWith"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+        <NamedIndividual IRI="http://localhost:3030/speciality-vocabulary/lists/3/scientificspeciality/14.03.09/4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#createdIn"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+        <NamedIndividual IRI="#Научно-исследовательский_институт_фундаментальной_и_клинической_иммунологии"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#associatedWith"/>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+        <NamedIndividual IRI="http://localhost:3030/speciality-vocabulary/lists/3/scientificspeciality/03.01.04/4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#createdIn"/>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+        <NamedIndividual IRI="#Федеральный_исследовательский_центр_питания,_биотехнологии_и_безопасности_пищи"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:3030/speciality-vocabulary/hasCode"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Д 001.001.01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOrderNumber"/>
+        <NamedIndividual IRI="#Д_001.001.01"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">714/нк</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://localhost:3030/speciality-vocabulary/hasCode"/>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Д 001.002.01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.semanticweb.org/давид/ontologies/2017/0/untitled-ontology-18#hasOrderNumber"/>
+        <NamedIndividual IRI="#Д_001.002.01"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">105/нк</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#associatedWith"/>
+        <ObjectProperty IRI="#includedIn"/>
+    </InverseObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#associatedWith</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Связь диссертационного совета с научной специальностью</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includedIn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Связь научной специальности и диссертационного совета</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isIn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">научная специальность преподается в вузе</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Д_001.001.01</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Д 001.001.01</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Д_001.002.01</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Д 001.002.01</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Научно-исследовательский_институт_фундаментальной_и_клинической_иммунологии</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Научно-исследовательский институт фундаментальной и клинической иммунологии</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Федеральный_исследовательский_центр_питания,_биотехнологии_и_безопасности_пищи</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Федеральный исследовательский центр питания, биотехнологии и безопасности пищи</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
