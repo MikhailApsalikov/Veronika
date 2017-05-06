@@ -21,6 +21,10 @@
 			window.location = "/" + route;
 		};
 
+		$scope.exportOwl = function () {
+			window.location = "/api/export";
+		};
+
 		function updateUserInfo() {
 			var userInfo = loginService.getUserInfo();
 			$scope.userName = userInfo.Name;

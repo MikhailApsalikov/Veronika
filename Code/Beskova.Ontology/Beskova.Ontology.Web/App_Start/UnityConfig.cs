@@ -9,6 +9,7 @@
 	using Repositories;
 	using Selp.Configuration;
 	using Selp.Interfaces;
+	using SemanticRepositories;
 
 	public static class UnityConfig
 	{
@@ -21,6 +22,9 @@
 			var efConstructorParameter = new InjectionConstructor(dbContext, container.Resolve<ISelpConfiguration>());
 
 			container.RegisterType<IAccountRepository, AccountRepository>(efConstructorParameter);
+
+			container.RegisterType<GraphProxy>(new ContainerControlledLifetimeManager());
+			container.RegisterType<IGraphProxy, GraphProxy>();
 			config.DependencyResolver = new UnityResolver(container);
 		}
 	}

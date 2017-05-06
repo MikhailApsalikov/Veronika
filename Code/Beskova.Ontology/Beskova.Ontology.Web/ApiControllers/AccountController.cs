@@ -1,6 +1,11 @@
 ﻿namespace Beskova.Ontology.Web.ApiControllers
 {
 	using System.Collections.Generic;
+	using System.IO;
+	using System.Net;
+	using System.Net.Http;
+	using System.Net.Http.Headers;
+	using System.Web.Hosting;
 	using System.Web.Http;
 	using AutoMapper;
 	using Entities;
@@ -8,6 +13,7 @@
 	using Models;
 	using Selp.Common.Entities;
 	using Selp.Controller;
+	using SemanticRepositories;
 	using Validators;
 
 	public class AccountController : SelpController<AccountModel, AccountModel, Account, int>
@@ -63,6 +69,23 @@
 			{
 				new ValidatorError("Такого пользователя не существует")
 			}));
+		}
+
+		[Route("api/export")]
+		[HttpGet]
+		public IHttpActionResult Export()
+		{
+			var stream = new FileStream(HostingEnvironment.MapPath(GraphProxy.OntologyPath), FileMode.Open);
+			var result = new HttpResponseMessage(HttpStatusCode.OK)
+			{
+				Content = new StreamContent(stream)
+			};
+			result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
+			{
+				FileName = "ontology.owl"
+			};
+			result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+			return ResponseMessage(result);
 		}
 	}
 }
