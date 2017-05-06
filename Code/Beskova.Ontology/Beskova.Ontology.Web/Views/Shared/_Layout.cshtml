@@ -23,9 +23,9 @@
 				</md-toolbar>
 				<md-content flex role="navigation" ng-controller="userOptionsController">
 					<md-list flex="">
-						<md-list-item class="md-3-line" ng-if="isLoggedIn()">
+						<md-list-item class="md-3-line">
 							<div class="md-list-item-text" layout="column">
-								<h3>{{userName}}</h3>
+								<h3 ng-if="isLoggedIn()">{{userName}}</h3>
 								<h4 class="italic">{{role}}</h4>
 							</div>
 						</md-list-item>

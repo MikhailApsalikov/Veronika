@@ -6,18 +6,12 @@
       .controller('userManagementController', ['$scope', 'loginService', 'baseService', 'modalService', userManagementController]);
 
 	function userManagementController($scope, loginService, service, modalService) {
-		var roles = [
-			'Пользователь',
-			'Эксперт',
-			'Администратор'
-		];
-
 		$scope.role = null;
 		$scope.data = [];
 		$scope.isLoaded = false;
 
 		$scope.isPageVisible = function () {
-			return $scope.role === roles[2];
+			return $scope.role === loginService.roles[2];
 		};
 
 		$scope.reload = function () {
@@ -29,7 +23,7 @@
 		};
 
 		$scope.userRoleString = function (role) {
-			return roles[role];
+			return loginService.roles[role];
 		};
 
 		$scope.create = function () {
@@ -63,7 +57,7 @@
 		function updateUserInfo() {
 			var userInfo = loginService.getUserInfo();
 			$scope.userName = userInfo.Name;
-			$scope.role = roles[userInfo.Role];
+			$scope.role = loginService.roles[userInfo.Role];
 		}
 
 		function activate() {

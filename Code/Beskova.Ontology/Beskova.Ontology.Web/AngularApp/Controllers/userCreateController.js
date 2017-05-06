@@ -14,7 +14,7 @@
 			$mdDialog.hide({
 				Name: $scope.login,
 				Password: $scope.password,
-				Role: 0
+				Role: 1
 			});
 		};
 

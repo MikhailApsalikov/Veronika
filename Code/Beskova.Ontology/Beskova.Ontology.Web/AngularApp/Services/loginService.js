@@ -3,7 +3,7 @@
 	var angular = window.angular;
 	angular
 		.module("APP")
-		.service("loginService", ["$http", 'errorService', loginService]);
+		.service("loginService", ["$http", "errorService", loginService]);
 
 	function loginService($http, errorService) {
 		return {
@@ -23,21 +23,21 @@
 			},
 			logout: function () {
 				delete window.localStorage.user;
-				if (!window.localStorage.user && window.location.pathname !== "/Login") {
-					window.location = "/Login";
-				}
+				window.location.reload();
 			},
 			getUserInfo: function () {
 				if (window.localStorage.user) {
 					return JSON.parse(window.localStorage.user);
 				}
-				return {};
+				return {
+					Role: 0
+				};
 			},
-			checkIfLoggedIn: function () {
-				if (!window.localStorage.user && window.location.pathname !== "/Login") {
-					window.location = "/Login";
-				}
-			}
+			roles: [
+				'Пользователь',
+				'Администрация министерства',
+				'Администратор'
+			]
 		};
 	}
 })();

@@ -9,8 +9,6 @@
 
 	public class TestDataInitializer : DropCreateDatabaseIfModelChanges<UserDbContext>
 	{
-		private readonly Random random = new Random();
-
 		protected override void Seed(UserDbContext context)
 		{
 			InitializeTestAccounts(context);
@@ -33,22 +31,9 @@
 				},
 				new Account
 				{
-					Name = "Expert",
+					Name = "MinistryAdmin",
 					Password = "123456",
-					Role = AccountRole.Expert
-				},
-				new Account
-				{
-					Name = "User",
-					Password = "123456",
-					Role = AccountRole.User
-				},
-				new Account
-				{
-					Name = "Inactive",
-					Password = "123456",
-					Role = AccountRole.User,
-					IsRemoved = true
+					Role = AccountRole.MinistryAdmin
 				}
 			};
 
