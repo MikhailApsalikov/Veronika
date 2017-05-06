@@ -39,11 +39,7 @@
 								<h3>ВУЗы</h3>
 							</div>
 						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="navigate('Login')" ng-if="!isLoggedIn()">
-							<div class="md-list-item-text" layout="column">
-								<h3>Аутентификация</h3>
-							</div>
-						</md-list-item>
+						
 						<md-list-item class="md-3-line" ng-click="navigate('UserManagement')" ng-if="isLoggedIn() && isAdmin()">
 							<div class="md-list-item-text" layout="column">
 								<h3>Управление пользователями</h3>
@@ -52,6 +48,11 @@
 						<md-list-item class="md-3-line" ng-click="exportOwl()">
 							<div class="md-list-item-text" layout="column">
 								<h3>Экспорт онтологии</h3>
+							</div>
+						</md-list-item>
+						<md-list-item class="md-3-line" ng-click="navigate('Login')" ng-if="!isLoggedIn()">
+							<div class="md-list-item-text" layout="column">
+								<h3>Аутентификация</h3>
 							</div>
 						</md-list-item>
 						<md-list-item class="md-3-line" ng-click="logout()" ng-if="isLoggedIn()">
@@ -80,6 +81,7 @@
 	<script src="~/AngularApp/Services/errorService.js"></script>
 	<script src="~/AngularApp/Services/loginService.js"></script>
 	<script src="~/AngularApp/Services/baseService.js"></script>
+	<script src="~/AngularApp/Services/messageService.js"></script>
 	@RenderSection("scripts", true)
 </body>
 </html>

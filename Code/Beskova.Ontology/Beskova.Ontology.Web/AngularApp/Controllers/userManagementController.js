@@ -3,9 +3,9 @@
 	var angular = window.angular;
 	angular
       .module('APP')
-      .controller('userManagementController', ['$scope', 'loginService', 'baseService', 'modalService', userManagementController]);
+      .controller('userManagementController', ['$scope', 'loginService', 'baseService', 'modalService', 'messageService', userManagementController]);
 
-	function userManagementController($scope, loginService, service, modalService) {
+	function userManagementController($scope, loginService, service, modalService, messageService) {
 		$scope.role = null;
 		$scope.data = [];
 		$scope.isLoaded = false;
@@ -30,6 +30,7 @@
 			modalService.openCustom({}, '/templates/create-user.html', 'userCreateController', function (account) {
 				service.create("account", account).then(function () {
 					$scope.reload();
+					messageService.show("Пользователь успешно создан");
 				});
 			});
 		};
@@ -38,6 +39,7 @@
 			account.Role = account.Role + 1;
 			service.update("account", account.Id, account).then(function () {
 				$scope.reload();
+				messageService.show("Пользователь " + account.Name + " успешно получил права администратора");
 			});
 		};
 
@@ -45,12 +47,14 @@
 			account.Role = account.Role - 1;
 			service.update("account", account.Id, account).then(function () {
 				$scope.reload();
+				messageService.show("Пользователь " + account.Name + " более не имеет прав администратора");
 			});
 		};
 
 		$scope.remove = function (id) {
 			service.remove("account", id).then(function () {
 				$scope.reload();
+				messageService.show("Пользователь успешно удален");
 			});
 		};
 

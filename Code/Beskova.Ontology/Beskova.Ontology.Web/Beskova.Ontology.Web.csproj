@@ -191,6 +191,7 @@
     <Content Include="AngularApp\Services\baseService.js" />
     <Content Include="AngularApp\Services\errorService.js" />
     <Content Include="AngularApp\Services\loginService.js" />
+    <Content Include="AngularApp\Services\messageService.js" />
     <Content Include="AngularApp\Services\modalController.js" />
     <Content Include="Content\grid.css" />
     <Content Include="Content\login.css" />
