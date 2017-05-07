@@ -41,7 +41,7 @@ namespace Beskova.Ontology.Web.ApiControllers
 		{
 			try
 			{
-				List<ScientificSpecialityModel> list = _repository.GetAll(filter).Select(MapEntityToModel).OrderBy(s => s.Id).ToList();
+				List<ScientificSpecialityModel> list = _repository.GetAll(filter).Select(MapEntityToModel).ToList();
 				var content = new EntitiesListResult<ScientificSpecialityModel>
 				{
 					Data = list,

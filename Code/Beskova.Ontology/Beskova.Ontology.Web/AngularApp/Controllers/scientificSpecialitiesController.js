@@ -3,9 +3,9 @@
 	var angular = window.angular;
 	angular
 		.module('APP')
-		.controller('scientificSpecialtiesController', ['$scope', 'loginService', 'baseService', 'messageService', scientificSpecialtiesController]);
+		.controller('scientificSpecialitiesController', ['$scope', 'loginService', 'baseService', 'messageService', scientificSpecialitiesController]);
 
-	function scientificSpecialtiesController($scope, loginService, service, messageService) {
+	function scientificSpecialitiesController($scope, loginService, service, messageService) {
 		$scope.role = null;
 		$scope.data = [];
 		$scope.isLoaded = false;
@@ -16,6 +16,10 @@
 				$scope.data = data.Data;
 				$scope.isLoaded = true;
 			});
+		};
+
+		$scope.details = function (id) {
+			window.location.href = "/ScientificSpeciality#id=" + id;
 		};
 
 		$scope.remove = function (id) {

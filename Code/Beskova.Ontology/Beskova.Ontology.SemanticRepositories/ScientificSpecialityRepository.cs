@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Beskova.Ontology.SemanticRepositories
 {
@@ -35,21 +33,21 @@ namespace Beskova.Ontology.SemanticRepositories
 			IEnumerable<ScientificSpeciality> result = base.GetAll();
 			if (filter != null)
 			{
-				if (!string.IsNullOrWhiteSpace(filter.SpecialtyCode))
+				if (!string.IsNullOrWhiteSpace(filter.SpecialityCode))
 				{
-					result = result.Where(s => s.Code.Contains(filter.SpecialtyCode));
+					result = result.Where(s => s.Code.Contains(filter.SpecialityCode));
 				}
-				if (!string.IsNullOrWhiteSpace(filter.SpecialtyName))
+				if (!string.IsNullOrWhiteSpace(filter.SpecialityName))
 				{
-					result = result.Where(s => s.Code.Contains(filter.SpecialtyName));
+					result = result.Where(s => s.Code.Contains(filter.SpecialityName));
 				}
-				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialtyCode))
+				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityCode))
 				{
-					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialtyCode));
+					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialityCode));
 				}
-				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialtyName))
+				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityName))
 				{
-					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialtyName));
+					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialityName));
 				}
 			}
 			return result.OrderBy(s => s.Name).ToList();

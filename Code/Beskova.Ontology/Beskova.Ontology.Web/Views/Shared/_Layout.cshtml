@@ -33,12 +33,12 @@
 							<h4 class="italic">{{role}}</h4>
 						</div>
 					</md-list-item>
-					<md-list-item class="md-3-line @(actionName.StartsWith("Specialt") ? "active" : string.Empty)" ng-click="navigate('Specialties')">
+					<md-list-item class="md-3-line @(actionName.StartsWith("Specialit") ? "active" : string.Empty)" ng-click="navigate('Specialities')">
 						<div class="md-list-item-text" layout="column">
 							<h3>Специальности</h3>
 						</div>
 					</md-list-item>
-					<md-list-item class="md-3-line @(actionName.StartsWith("ScientificSpecialt") ? "active" : string.Empty)" ng-click="navigate('ScientificSpecialties')">
+					<md-list-item class="md-3-line @(actionName.StartsWith("ScientificSpecialit") ? "active" : string.Empty)" ng-click="navigate('ScientificSpecialities')">
 						<div class="md-list-item-text" layout="column">
 							<h3>Научные специальности</h3>
 						</div>
@@ -82,7 +82,10 @@
 		</md-content>
 	</section>
 </div>
-
+	
+<script type="text/javascript">
+	window.baseUri = '@Request.Url.Scheme://@Request.Url.Host/';
+</script>
 <script src="~/node_modules/angular/angular.js"></script>
 <script src="~/node_modules/angular-animate/angular-animate.js"></script>
 <script src="~/node_modules/angular-aria/angular-aria.js"></script>

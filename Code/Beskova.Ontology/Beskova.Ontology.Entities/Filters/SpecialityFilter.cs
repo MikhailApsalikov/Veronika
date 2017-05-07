@@ -2,9 +2,9 @@
 {
 	public class SpecialityFilter
 	{
-		public string SpecialtyCode { get; set; }
-		public string SpecialtyName { get; set; }
-		public string ScientificSpecialtyCode { get; set; }
-		public string ScientificSpecialtyName { get; set; }
+		public string SpecialityCode { get; set; }
+		public string SpecialityName { get; set; }
+		public string ScientificSpecialityCode { get; set; }
+		public string ScientificSpecialityName { get; set; }
 	}
 }

@@ -185,7 +185,7 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\Controllers\errorController.js" />
     <Content Include="AngularApp\Controllers\loginController.js" />
-    <Content Include="AngularApp\Controllers\scientificSpecialtiesController.js" />
+    <Content Include="AngularApp\Controllers\scientificSpecialitiesController.js" />
     <Content Include="AngularApp\Controllers\userCreateController.js" />
     <Content Include="AngularApp\Controllers\userManagementController.js" />
     <Content Include="AngularApp\Controllers\userOptionsController.js" />
@@ -224,14 +224,14 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Specialty.cshtml" />
+    <Content Include="Views\Home\Speciality.cshtml" />
     <Content Include="Views\Home\Univercities.cshtml" />
     <Content Include="Views\Home\Univercity.cshtml" />
     <Content Include="Views\Home\UserManagement.cshtml" />
-    <Content Include="Views\Home\Specialties.cshtml" />
-    <Content Include="Views\Home\ScientificSpecialty.cshtml" />
+    <Content Include="Views\Home\Specialities.cshtml" />
+    <Content Include="Views\Home\ScientificSpeciality.cshtml" />
     <Content Include="Views\Home\DissertationCouncil.cshtml" />
-    <Content Include="Views\Home\ScientificSpecialties.cshtml" />
+    <Content Include="Views\Home\ScientificSpecialities.cshtml" />
     <Content Include="Views\Home\DissertationCouncils.cshtml" />
     <Content Include="App_Data\david.owl" />
     <Content Include="App_Data\ontology-src.owl" />

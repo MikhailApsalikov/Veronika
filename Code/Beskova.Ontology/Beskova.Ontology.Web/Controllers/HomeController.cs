@@ -4,22 +4,22 @@
 	
 	public class HomeController : Controller
 	{
-		public ViewResult Specialties() 
+		public ViewResult Specialities() 
 		{
 			return View();
 		}
 
-		public ViewResult Specialty()
+		public ViewResult Speciality()
 		{
 			return View();
 		}
 
-		public ViewResult ScientificSpecialties()
+		public ViewResult ScientificSpecialities()
 		{
 			return View();
 		}
 
-		public ViewResult ScientificSpecialty()
+		public ViewResult ScientificSpeciality()
 		{
 			return View();
 		}

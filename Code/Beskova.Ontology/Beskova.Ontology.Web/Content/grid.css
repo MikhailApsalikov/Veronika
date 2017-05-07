@@ -43,3 +43,7 @@
 .grid-progress-container {
 	zoom: 4;
 }
+
+.grid-actions {
+	width: 15%;
+}
