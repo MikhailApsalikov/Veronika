@@ -1,0 +1,23 @@
+﻿.detail-page-properties {
+	margin-top: 50px;
+}
+
+.detail-page-property {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.detail-page-property-key {
+	width: 30%;
+	text-align: right;
+	font-weight: bold;
+	margin-right: 25px;
+}
+
+.detail-page-property-key:after {
+	content: ":";
+}
+
+.detail-page-property-value {
+	width: 80%;
+}

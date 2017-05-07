@@ -52,7 +52,7 @@
 				<th class="grid-item" ng-bind="item.Code"></th>
 				<th class="grid-item" ng-bind="item.Name"></th>
 				<th class="grid-item grid-links">
-					<a class="block" href="#" ng-repeat="speciality in item.Specialities track by $index" ng-click="specDetails(item.Id)">({{speciality.Code}}) {{speciality.Name}}</a>
+					<a class="block" href="#" ng-repeat="speciality in item.Specialities track by $index" ng-click="specDetails(speciality.Id)">({{speciality.Code}}) {{speciality.Name}}</a>
 				</th>
 				<th class="grid-item grid-actions">
 					<md-button class="md-fab md-primary" ng-click="details(item.Id)" aria-label="Details">
