@@ -9,10 +9,11 @@
 		$scope.role = null;
 		$scope.data = [];
 		$scope.isLoaded = false;
+		$scope.filter = {};
 
 		$scope.reload = function () {
 			$scope.isLoaded = false;
-			service.getList("scientificSpeciality").then(function (data) {
+			service.getList("scientificSpeciality", $scope.filter).then(function (data) {
 				$scope.data = data.Data;
 				$scope.isLoaded = true;
 			});

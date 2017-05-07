@@ -1,0 +1,11 @@
+﻿.speciality-filters {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+	.speciality-filters .md-block {
+		width: 20%;
+		margin: 0 10px;
+	}
+

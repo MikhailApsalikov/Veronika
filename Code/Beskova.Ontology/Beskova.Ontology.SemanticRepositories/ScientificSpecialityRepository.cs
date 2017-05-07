@@ -43,21 +43,21 @@ namespace Beskova.Ontology.SemanticRepositories
 			IEnumerable<ScientificSpeciality> result = base.GetAll();
 			if (filter != null)
 			{
-				if (!string.IsNullOrWhiteSpace(filter.SpecialityCode))
-				{
-					result = result.Where(s => s.Code.Contains(filter.SpecialityCode));
-				}
-				if (!string.IsNullOrWhiteSpace(filter.SpecialityName))
-				{
-					result = result.Where(s => s.Code.Contains(filter.SpecialityName));
-				}
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityCode))
 				{
 					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialityCode));
 				}
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityName))
 				{
-					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialityName));
+					result = result.Where(s => s.Name.Contains(filter.ScientificSpecialityName));
+				}
+				if (!string.IsNullOrWhiteSpace(filter.SpecialityCode))
+				{
+					result = result.Where(s => s.Specialities.Any(d=>d.Code.Contains(filter.SpecialityCode)));
+				}
+				if (!string.IsNullOrWhiteSpace(filter.SpecialityName))
+				{
+					result = result.Where(s => s.Specialities.Any(d => d.Name.Contains(filter.SpecialityName)));
 				}
 			}
 			return result.OrderBy(s => s.Name).ToList();

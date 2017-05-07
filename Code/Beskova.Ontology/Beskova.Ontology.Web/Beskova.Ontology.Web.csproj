@@ -197,6 +197,7 @@
     <Content Include="Content\grid.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\speciality-filters.css" />
     <Content Include="Content\user-management.css" />
     <Content Include="Global.asax" />
     <Content Include="templates\create-user.html" />
