@@ -71,9 +71,14 @@
     <Compile Include="GraphProxy.cs" />
     <Compile Include="Helpers\SemanticHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScientificSpecialityRepository.cs" />
     <Compile Include="SemanticRepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Beskova.Ontology.Entities\Beskova.Ontology.Entities.csproj">
+      <Project>{776891B0-3690-41D8-B7B1-57AE7E9B834C}</Project>
+      <Name>Beskova.Ontology.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Beskova.Ontology.Interfaces\Beskova.Ontology.Interfaces.csproj">
       <Project>{c389b2a7-391e-48ae-9ad8-a4a7a3f171f7}</Project>
       <Name>Beskova.Ontology.Interfaces</Name>

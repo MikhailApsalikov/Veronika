@@ -10,10 +10,8 @@
 	public class GraphProxy : IGraphProxy
 	{
 		public const string OntologyPath = "~/App_Data/Ontology.owl";
-		public const string IndividualsDomain = "http://localhost:3030";
 
 		private readonly object _lock = new object();
-		private int? id;
 		public OntologyGraph Graph { get; private set; }
 
 		public void LoadGraph()
@@ -31,21 +29,6 @@
 			{
 				Graph.SaveToFile(HostingEnvironment.MapPath(OntologyPath));
 			}
-		}
-
-		public int GenerateId()
-		{
-			if (id.HasValue)
-			{
-				id = id + 1;
-				return id.Value;
-			}
-
-			id = Graph.Nodes.Where(n => n is UriNode && n.ToString().Contains(IndividualsDomain))
-				     .Cast<UriNode>()
-				     .Select(n => n.GetId())
-				     .Max() + 1;
-			return id ?? 1;
 		}
 	}
 }

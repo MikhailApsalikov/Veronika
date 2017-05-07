@@ -65,7 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountModel.cs" />
+    <Compile Include="DissertationCouncilModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScientificSpecialityModel.cs" />
+    <Compile Include="SpecialityModel.cs" />
+    <Compile Include="UniversityModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

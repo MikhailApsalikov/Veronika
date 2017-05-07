@@ -93,16 +93,16 @@
 				resource.TriplesWithSubject.Where(s => s.Predicate.ToString().EndsWith(propertyName)).ToList());
 		}
 
-		public static int GetId(this OntologyResource resource)
+		public static string GetId(this OntologyResource resource)
 		{
 			var node = resource.Resource as UriNode;
 			return GetId(node);
 		}
 
-		public static int GetId(this UriNode uriNode)
+		public static string GetId(this UriNode uriNode)
 		{
 			// ReSharper disable once PossibleNullReferenceException
-			return int.Parse(uriNode.Uri.Segments.Last());
+			return uriNode.Uri.ToString();
 		}
 	}
 }

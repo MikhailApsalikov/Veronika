@@ -8,7 +8,14 @@
 	{
 		public static void RegisterMappings()
 		{
-			Mapper.Initialize(cfg => { cfg.CreateMap<AccountModel, Account>().ReverseMap(); });
+			Mapper.Initialize(cfg =>
+			{
+				cfg.CreateMap<AccountModel, Account>().ReverseMap();
+				cfg.CreateMap<Speciality, SpecialityModel>();
+				cfg.CreateMap<ScientificSpeciality, ScientificSpecialityModel>();
+				cfg.CreateMap<DissertationCouncil, DissertationCouncilModel>();
+				cfg.CreateMap<University, UniversityModel>();
+			});
 		}
 	}
 }

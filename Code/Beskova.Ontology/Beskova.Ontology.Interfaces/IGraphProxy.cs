@@ -7,6 +7,5 @@
 		OntologyGraph Graph { get; }
 		void LoadGraph();
 		void SaveChanges();
-		int GenerateId();
 	}
 }
