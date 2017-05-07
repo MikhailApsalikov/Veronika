@@ -2,9 +2,9 @@
 {
 	using System.Collections.Generic;
 	using Selp.Interfaces;
-	public class Speciality : ISelpEntity<int>
+	public class Speciality : ISelpEntity<string>
 	{
-		public int Id { get; set; }
+		public string Id { get; set; }
 
 		public string Name { get; set; }
 

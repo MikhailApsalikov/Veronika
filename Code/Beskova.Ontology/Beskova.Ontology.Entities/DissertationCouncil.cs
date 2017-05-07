@@ -1,28 +1,21 @@
-﻿using System;
-
-namespace Beskova.Ontology.Entities
+﻿namespace Beskova.Ontology.Entities
 {
-	using System.Collections.Generic;
 	using Selp.Interfaces;
-	public class DissertationCouncil : ISelpEntity<int>
+
+	public class DissertationCouncil : ISelpEntity<string>
 	{
-		public int Id { get; set; }
-
-		public string Name { get; set; }
-
+		//hasCode
 		public string Code { get; set; }
 
-		public DateTime CreationDate { get; set; }
+		//hasOrderNumber
+		public string OrderId { get; set; }
 
-		public int OrderNumber { get; set; }
+		//createdIn
+		public University University { get; set; }
 
-		public List<ScientificSpeciality> ScientificSpecialities { get; set; }
+		//associatedWith
+		public ScientificSpeciality ScientificSpeciality { get; set; }
 
-		public int UniversityId { get; set; }
-
-		public DissertationCouncil()
-		{
-			ScientificSpecialities = new List<ScientificSpeciality>();
-		}
+		public string Id { get; set; }
 	}
 }

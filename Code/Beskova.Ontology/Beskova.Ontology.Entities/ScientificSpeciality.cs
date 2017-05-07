@@ -1,16 +1,21 @@
 ﻿namespace Beskova.Ontology.Entities
 {
+	using System.Collections.Generic;
 	using Selp.Interfaces;
-	public class ScientificSpeciality : ISelpEntity<int>
+	public class ScientificSpeciality : ISelpEntity<string>
 	{
-		public int Id { get; set; }
+		public string Id { get; set; }
 
 		public string Name { get; set; }
 
 		public string Code { get; set; }
 
-		public int SpecialityId { get; set; }
+		//specialityConsistsOf
+		public List<Speciality> Speciality { get; set; }
 
-		public int DissertationCouncilId { get; set; }
+		public ScientificSpeciality()
+		{
+			Speciality = new List<Speciality>();
+		}
 	}
 }
