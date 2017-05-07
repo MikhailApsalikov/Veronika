@@ -77,6 +77,7 @@
     <Compile Include="IGraphProxy.cs" />
     <Compile Include="IScientificSpecialityRepository.cs" />
     <Compile Include="ISpecialityRepository.cs" />
+    <Compile Include="IUniversityRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

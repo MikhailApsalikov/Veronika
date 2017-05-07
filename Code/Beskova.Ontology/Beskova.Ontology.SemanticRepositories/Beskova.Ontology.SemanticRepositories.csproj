@@ -75,6 +75,7 @@
     <Compile Include="ScientificSpecialityRepository.cs" />
     <Compile Include="SemanticRepositoryBase.cs" />
     <Compile Include="SpecialityRepository.cs" />
+    <Compile Include="UniversityRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Beskova.Ontology.Entities\Beskova.Ontology.Entities.csproj">

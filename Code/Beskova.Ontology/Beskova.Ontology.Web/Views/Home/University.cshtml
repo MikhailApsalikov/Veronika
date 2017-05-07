@@ -4,11 +4,33 @@
 }
 
 @section css{
-
+	<link href="~/Content/detail-page.css" rel="stylesheet"/>
 }
 
 @section scripts{
-
+	<script src="~/AngularApp/Controllers/universityController.js"></script>
 }
 
-<h1>Страница находится в разработке!</h1>
+<div class="detail-page" ng-controller="universityController">
+	<h1>
+		ВУЗ "<span ng-bind="data.Name"></span>"
+	</h1>
+	<div class="detail-page-properties">
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">URI</div>
+			<div class="detail-page-property-value">
+				<a class="block" ng-href="{{data.Id}}" ng-bind="data.Id"></a>
+			</div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Название</div>
+			<div class="detail-page-property-value" ng-bind="data.Name"></div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Научные специальности</div>
+			<div class="detail-page-property-value">
+				<a class="block" href="#" ng-repeat="scientificSpeciality in data.ScientificSpecialities track by $index" ng-click="scientificSpecDetails(scientificSpeciality.Id)">({{scientificSpeciality.Code}}) {{scientificSpeciality.Name}}</a>
+			</div>
+		</div>
+	</div>
+</div>

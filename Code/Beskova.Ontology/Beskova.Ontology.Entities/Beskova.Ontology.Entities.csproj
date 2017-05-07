@@ -69,6 +69,7 @@
     <Compile Include="Enums\AccountRole.cs" />
     <Compile Include="Filters\DissertationCouncilFilter.cs" />
     <Compile Include="Filters\SpecialityFilter.cs" />
+    <Compile Include="Filters\UniversityFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScientificSpeciality.cs" />
     <Compile Include="Speciality.cs" />

@@ -7,13 +7,13 @@
 	{
 		public University()
 		{
-			DissertationCouncils = new List<DissertationCouncil>();
+			ScientificSpecialities = new List<ScientificSpeciality>();
 		}
 
 		public string Name { get; set; }
 
 		// revert IsIn
-		public List<DissertationCouncil> DissertationCouncils { get; set; }
+		public List<ScientificSpeciality> ScientificSpecialities { get; set; }
 
 		public string Id { get; set; }
 	}

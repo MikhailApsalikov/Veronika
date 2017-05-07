@@ -7,12 +7,12 @@
 	{
 		public UniversityModel()
 		{
-			DissertationCouncils = new List<DissertationCouncilModel>();
+			ScientificSpecialities = new List<ScientificSpecialityModel>();
 		}
 
 		public string Name { get; set; }
 
-		public List<DissertationCouncilModel> DissertationCouncils { get; set; }
+		public List<ScientificSpecialityModel> ScientificSpecialities { get; set; }
 
 		public string Id { get; set; }
 	}

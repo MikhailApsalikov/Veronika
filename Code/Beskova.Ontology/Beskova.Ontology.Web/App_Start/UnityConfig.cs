@@ -25,6 +25,7 @@
 			container.RegisterType<ISpecialityRepository, SpecialityRepository>();
 			container.RegisterType<IScientificSpecialityRepository, ScientificSpecialityRepository>();
 			container.RegisterType<IDissertationCouncilRepository, DissertationCouncilRepository>();
+			container.RegisterType<IUniversityRepository, UniversityRepository>();
 
 			container.RegisterType<GraphProxy>(new ContainerControlledLifetimeManager());
 			container.RegisterType<IGraphProxy, GraphProxy>();

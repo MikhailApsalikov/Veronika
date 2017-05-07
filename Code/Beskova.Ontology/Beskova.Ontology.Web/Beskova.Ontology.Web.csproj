@@ -183,6 +183,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularApp\app.js" />
+    <Content Include="AngularApp\Controllers\universityController.js" />
+    <Content Include="AngularApp\Controllers\universitiesController.js" />
     <Content Include="AngularApp\Controllers\errorController.js" />
     <Content Include="AngularApp\Controllers\loginController.js" />
     <Content Include="AngularApp\Controllers\dissertationCouncilsController.js" />
@@ -200,6 +202,7 @@
     <Content Include="AngularApp\Services\messageService.js" />
     <Content Include="AngularApp\Services\modalController.js" />
     <Content Include="Content\detail-page.css" />
+    <Content Include="Content\university-filters.css" />
     <Content Include="Content\dissertation-council-filters.css" />
     <Content Include="Content\grid.css" />
     <Content Include="Content\login.css" />
@@ -215,6 +218,7 @@
     <Compile Include="ApiControllers\DissertationCouncilController.cs" />
     <Compile Include="ApiControllers\ScientificSpecialtyController.cs" />
     <Compile Include="ApiControllers\SpecialityController.cs" />
+    <Compile Include="ApiControllers\UniversityController.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
