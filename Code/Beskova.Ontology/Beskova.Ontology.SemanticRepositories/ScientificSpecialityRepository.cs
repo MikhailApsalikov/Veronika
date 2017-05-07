@@ -45,11 +45,6 @@
 			return result.OrderBy(s => s.Name).ToList();
 		}
 
-		public void Remove(string id)
-		{
-			throw new NotImplementedException();
-		}
-
 		protected override ScientificSpeciality Map(OntologyResource instance)
 		{
 			var entity = new ScientificSpeciality

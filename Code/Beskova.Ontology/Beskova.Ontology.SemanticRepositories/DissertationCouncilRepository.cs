@@ -37,11 +37,6 @@
 			return result.OrderBy(s => s.Code).ToList();
 		}
 
-		public void Remove(string id)
-		{
-			throw new NotImplementedException();
-		}
-
 		protected override DissertationCouncil Map(OntologyResource instance)
 		{
 			var entity = new DissertationCouncil

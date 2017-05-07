@@ -57,6 +57,20 @@
 			}
 		}
 
+		[HttpDelete]
+		public virtual IHttpActionResult Delete(string id)
+		{
+			try
+			{
+				_repository.Remove(id);
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return HandleException(ex);
+			}
+		}
+
 		private SpecialityModel MapEntityToModel(Speciality entity)
 		{
 			return Mapper.Map<SpecialityModel>(entity);
