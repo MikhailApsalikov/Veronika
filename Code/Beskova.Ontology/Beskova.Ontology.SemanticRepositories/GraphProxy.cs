@@ -1,15 +1,19 @@
 ﻿namespace Beskova.Ontology.SemanticRepositories
 {
+	using System.IO;
 	using System.Linq;
 	using System.Web.Hosting;
 	using Helpers;
 	using Interfaces;
 	using VDS.RDF;
 	using VDS.RDF.Ontology;
+	using VDS.RDF.Parsing;
 
 	public class GraphProxy : IGraphProxy
 	{
-		public const string OntologyPath = "~/App_Data/Ontology.owl";
+		public const string OntologyPath = "~/App_Data/ontology.owl";
+		public const string Ontology1Path = "~/App_Data/david.owl";
+		public const string Ontology2Path = "~/App_Data/ontology-src.owl";
 
 		private readonly object _lock = new object();
 		public OntologyGraph Graph { get; private set; }
@@ -19,7 +23,10 @@
 			if (Graph == null)
 			{
 				Graph = new OntologyGraph();
-				Graph.LoadFromFile(HostingEnvironment.MapPath(OntologyPath));
+				if (File.Exists(HostingEnvironment.MapPath(OntologyPath)))
+				{
+					Graph.LoadFromFile(HostingEnvironment.MapPath(OntologyPath));
+				}
 			}
 		}
 

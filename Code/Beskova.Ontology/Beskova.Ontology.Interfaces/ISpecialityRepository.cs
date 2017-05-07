@@ -8,5 +8,6 @@
 	{
 		List<Speciality> GetAll(SpecialityFilter filter);
 		Speciality GetById(string id);
+		void Remove(string id);
 	}
 }

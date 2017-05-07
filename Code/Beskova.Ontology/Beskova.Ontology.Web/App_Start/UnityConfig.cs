@@ -26,6 +26,7 @@
 
 			container.RegisterType<GraphProxy>(new ContainerControlledLifetimeManager());
 			container.RegisterType<IGraphProxy, GraphProxy>();
+
 			config.DependencyResolver = new UnityResolver(container);
 		}
 	}

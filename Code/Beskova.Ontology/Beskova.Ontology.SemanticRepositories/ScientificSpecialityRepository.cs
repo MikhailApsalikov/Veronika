@@ -8,6 +8,7 @@ namespace Beskova.Ontology.SemanticRepositories
 {
 	using Entities;
 	using Entities.Filters;
+	using Helpers;
 	using Interfaces;
 	using VDS.RDF.Ontology;
 
@@ -23,13 +24,18 @@ namespace Beskova.Ontology.SemanticRepositories
 		{
 			return new ScientificSpeciality()
 			{
-
+				Id = instance.GetId()
 			};
 		}
 
 		public List<ScientificSpeciality> GetAll(SpecialityFilter filter)
 		{
 			return base.GetAll();
+		}
+
+		public void Remove(string id)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
