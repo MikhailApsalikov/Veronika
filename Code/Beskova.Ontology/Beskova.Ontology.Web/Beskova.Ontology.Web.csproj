@@ -185,7 +185,9 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\Controllers\errorController.js" />
     <Content Include="AngularApp\Controllers\loginController.js" />
+    <Content Include="AngularApp\Controllers\specialitiesController.js" />
     <Content Include="AngularApp\Controllers\scientificSpecialitiesController.js" />
+    <Content Include="AngularApp\Controllers\specialityController.js" />
     <Content Include="AngularApp\Controllers\scientificSpecialityController.js" />
     <Content Include="AngularApp\Controllers\userCreateController.js" />
     <Content Include="AngularApp\Controllers\userManagementController.js" />
@@ -208,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiControllers\ScientificSpecialtyController.cs" />
+    <Compile Include="ApiControllers\SpecialityController.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />

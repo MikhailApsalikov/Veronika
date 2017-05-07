@@ -22,6 +22,7 @@
 			var efConstructorParameter = new InjectionConstructor(dbContext, container.Resolve<ISelpConfiguration>());
 
 			container.RegisterType<IAccountRepository, AccountRepository>(efConstructorParameter);
+			container.RegisterType<ISpecialityRepository, SpecialityRepository>();
 			container.RegisterType<IScientificSpecialityRepository, ScientificSpecialityRepository>();
 
 			container.RegisterType<GraphProxy>(new ContainerControlledLifetimeManager());

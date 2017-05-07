@@ -31,7 +31,7 @@
 
 		protected OntologyClass GetClass(string name)
 		{
-			return GraphProxy.Graph.OwlClasses.FirstOrDefault(c => c.Resource.ToString().Contains(name));
+			return GraphProxy.Graph.OwlClasses.FirstOrDefault(c => c.Resource.ToString().EndsWith($"/{name}"));
 		}
 
 		protected abstract TEntity Map(OntologyResource instance);
