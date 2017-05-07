@@ -33,19 +33,11 @@
 			return resource.GetProperties(propertyName).Cast<UriNode>().ToList();
 		}
 
-		public static void SetIntProperty(this OntologyResource resource, string propertyName, int? value)
+		public static List<OntologyResource> GetSubjectsByObjectProperty(this OntologyResource resource, string propertyName)
 		{
-			resource.SetProperty(propertyName, value.HasValue ? resource.Graph.CreateLiteralNode(value.ToString()) : null);
-		}
-
-		public static void SetStringProperty(this OntologyResource resource, string propertyName, string value)
-		{
-			resource.SetProperty(propertyName, value != null ? resource.Graph.CreateLiteralNode(value) : null);
-		}
-
-		public static void SetObjectProperties(this OntologyResource resource, string propertyName, List<UriNode> nodes)
-		{
-			resource.SetProperties(propertyName, nodes?.Cast<INode>().ToList() ?? new List<INode>());
+			List<Triple> triples = resource.TriplesWithObject.Where(s => s.Predicate.ToString().EndsWith(propertyName))
+				.ToList();
+			return triples.Select(t => t.Subject).Cast<UriNode>().Select(s => (resource.Graph as OntologyGraph).CreateOntologyResource(s)).ToList();
 		}
 
 		// Common
@@ -60,31 +52,6 @@
 			List<Triple> triples = resource.TriplesWithSubject.Where(s => s.Predicate.ToString().EndsWith(propertyName))
 				.ToList();
 			return triples.Select(t => t.Object).ToList();
-		}
-
-		public static void SetProperty(this OntologyResource resource, string propertyName, INode value)
-		{
-			resource.RemoveProperty(propertyName);
-			OntologyProperty property =
-				((OntologyGraph) resource.Graph).OwlProperties.FirstOrDefault(s => s.Resource.ToString().EndsWith(propertyName));
-			if (value != null && property != null)
-			{
-				var triple = new Triple(resource.Resource, property.Resource, value, resource.Graph);
-				resource.Graph.Assert(triple);
-			}
-		}
-
-		public static void SetProperties(this OntologyResource resource, string propertyName, List<INode> values)
-		{
-			resource.RemoveProperty(propertyName);
-			OntologyProperty property =
-				((OntologyGraph) resource.Graph).OwlProperties.FirstOrDefault(s => s.Resource.ToString().EndsWith(propertyName));
-			if (values != null && values.Any() && property != null)
-			{
-				IEnumerable<Triple> triples =
-					values.Select(v => new Triple(resource.Resource, property.Resource, v, resource.Graph));
-				resource.Graph.Assert(triples);
-			}
 		}
 
 		public static void RemoveProperty(this OntologyResource resource, string propertyName)

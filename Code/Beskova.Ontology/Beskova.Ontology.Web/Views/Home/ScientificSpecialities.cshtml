@@ -21,7 +21,7 @@
 		<tr class="item">
 			<th class="grid-item">Код</th>
 			<th class="grid-item">Название</th>
-			<th class="grid-item">Специальности аспирантуры</th>
+			<th class="grid-item grid-links">Специальности аспирантуры</th>
 			<th class="grid-item"></th>
 		</tr>
 		</thead>
@@ -29,7 +29,8 @@
 		<tr class="item" ng-repeat="item in data track by $index">
 			<th class="grid-item" ng-bind="item.Code"></th>
 			<th class="grid-item" ng-bind="item.Name"></th>
-			<th class="grid-item">
+			<th class="grid-item grid-links">
+				<a class="block" href="#" ng-repeat="speciality in item.Specialities track by $index" ng-click="specDetails(item.Id)">({{speciality.Code}}) {{speciality.Name}}</a>
 			</th>
 			<th class="grid-item grid-actions">
 				<md-button class="md-fab md-primary" ng-click="details(item.Id)" aria-label="Details">

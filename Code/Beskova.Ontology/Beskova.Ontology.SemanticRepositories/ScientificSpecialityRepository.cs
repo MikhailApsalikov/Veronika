@@ -20,12 +20,22 @@ namespace Beskova.Ontology.SemanticRepositories
 
 		protected override ScientificSpeciality Map(OntologyResource instance)
 		{
-			return new ScientificSpeciality()
+			var entity = new ScientificSpeciality()
 			{
 				Id = instance.GetId(),
 				Name = instance.GetStringProperty("label"),
 				Code = instance.GetStringProperty("hasCode")
 			};
+
+			entity.Specialities = instance.GetSubjectsByObjectProperty("specialityConsistsOf")
+				.Select(s => new Speciality()
+			{
+				Id = s.GetId(),
+				Name = s.GetStringProperty("label"),
+				Code = s.GetStringProperty("hasCode")
+			}).ToList();
+
+			return entity;
 		}
 
 		public List<ScientificSpeciality> GetAll(SpecialityFilter filter)

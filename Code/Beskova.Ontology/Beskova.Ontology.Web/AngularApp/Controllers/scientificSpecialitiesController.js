@@ -22,6 +22,10 @@
 			window.location.href = "/ScientificSpeciality#id=" + id;
 		};
 
+		$scope.specDetails = function (id) {
+			window.location.href = "/Speciality#id=" + id;
+		};
+
 		$scope.remove = function (id) {
 			service.remove("scientificSpeciality", id).then(function () {
 				$scope.reload();
