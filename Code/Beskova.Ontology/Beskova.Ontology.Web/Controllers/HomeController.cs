@@ -34,12 +34,12 @@
 			return View();
 		}
 
-		public ViewResult Univercities()
+		public ViewResult Universities()
 		{
 			return View();
 		}
 
-		public ViewResult Univercity()
+		public ViewResult University()
 		{
 			return View();
 		}

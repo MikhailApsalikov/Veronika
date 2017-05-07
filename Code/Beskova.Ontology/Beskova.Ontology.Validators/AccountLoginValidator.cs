@@ -5,10 +5,7 @@
 
 	public class AccountLoginValidator : SelpValidator
 	{
-		public AccountLoginValidator(AccountModel user)
-		{
-			User = user;
-		}
+		public AccountLoginValidator(AccountModel user) { User = user; }
 
 		public AccountModel User { get; set; }
 
@@ -22,15 +19,9 @@
 				return;
 			}
 
-			if (string.IsNullOrWhiteSpace(User.Name))
-			{
-				AddError("Введите логин", "Логин");
-			}
+			if (string.IsNullOrWhiteSpace(User.Name)) { AddError("Введите логин", "Логин"); }
 
-			if (string.IsNullOrWhiteSpace(User.Password))
-			{
-				AddError("Введите пароль", "Пароль");
-			}
+			if (string.IsNullOrWhiteSpace(User.Password)) { AddError("Введите пароль", "Пароль"); }
 		}
 	}
 }

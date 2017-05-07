@@ -24,12 +24,9 @@
 			return ontClass.Instances.Select(Map).ToList();
 		}
 
-		public virtual TEntity GetById(string id)
-		{
-			return GetAll().FirstOrDefault(s => s.Id == id);
-		}
+		public virtual TEntity GetById(string id) { return GetAll().FirstOrDefault(s => s.Id == id); }
 
-		protected OntologyClass GetClass(string name)
+		protected virtual OntologyClass GetClass(string name)
 		{
 			return GraphProxy.Graph.OwlClasses.FirstOrDefault(c => c.Resource.ToString().EndsWith($"/{name}"));
 		}

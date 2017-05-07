@@ -11,9 +11,7 @@
 
 	public class SpecialityRepository : SemanticRepositoryBase<Speciality>, ISpecialityRepository
 	{
-		public SpecialityRepository(IGraphProxy graphProxy) : base(graphProxy)
-		{
-		}
+		public SpecialityRepository(IGraphProxy graphProxy) : base(graphProxy) { }
 
 		protected override string EntityName => "Speciality";
 
@@ -23,21 +21,28 @@
 			if (filter != null)
 			{
 				if (!string.IsNullOrWhiteSpace(filter.SpecialityCode))
-					result = result.Where(s => s.Code.Contains(filter.SpecialityCode));
+				{
+					result = result.Where(s => s.Code.ToUpperInvariant().Contains(filter.SpecialityCode.ToUpperInvariant()));
+				}
 				if (!string.IsNullOrWhiteSpace(filter.SpecialityName))
-					result = result.Where(s => s.Name.Contains(filter.SpecialityName));
+				{
+					result = result.Where(s => s.Name.ToUpperInvariant().Contains(filter.SpecialityName.ToUpperInvariant()));
+				}
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityCode))
-					result = result.Where(s => s.ScientificSpecialities.Any(d => d.Code.Contains(filter.ScientificSpecialityCode)));
+				{
+					result = result.Where(s => s.ScientificSpecialities.Any(d => d.Code.ToUpperInvariant()
+						.Contains(filter.ScientificSpecialityCode.ToUpperInvariant())));
+				}
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityName))
-					result = result.Where(s => s.ScientificSpecialities.Any(d => d.Name.Contains(filter.ScientificSpecialityName)));
+				{
+					result = result.Where(s => s.ScientificSpecialities.Any(d => d.Name.ToUpperInvariant()
+						.Contains(filter.ScientificSpecialityName.ToUpperInvariant())));
+				}
 			}
 			return result.OrderBy(s => s.Name).ToList();
 		}
 
-		public void Remove(string id)
-		{
-			throw new NotImplementedException();
-		}
+		public void Remove(string id) { throw new NotImplementedException(); }
 
 		protected override Speciality Map(OntologyResource instance)
 		{

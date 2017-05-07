@@ -5,10 +5,7 @@
 
 	public class SpecialityModel : ISelpEntity<string>
 	{
-		public SpecialityModel()
-		{
-			ScientificSpecialities = new List<ScientificSpecialityModel>();
-		}
+		public SpecialityModel() { ScientificSpecialities = new List<ScientificSpecialityModel>(); }
 
 		public string Name { get; set; }
 

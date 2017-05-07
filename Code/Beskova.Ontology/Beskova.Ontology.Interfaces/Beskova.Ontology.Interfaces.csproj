@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAccountRepository.cs" />
+    <Compile Include="IDissertationCouncilRepository.cs" />
     <Compile Include="IGraphProxy.cs" />
     <Compile Include="IScientificSpecialityRepository.cs" />
     <Compile Include="ISpecialityRepository.cs" />

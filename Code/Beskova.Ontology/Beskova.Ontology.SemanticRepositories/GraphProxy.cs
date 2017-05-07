@@ -1,13 +1,10 @@
 ﻿namespace Beskova.Ontology.SemanticRepositories
 {
 	using System.IO;
-	using System.Linq;
 	using System.Web.Hosting;
-	using Helpers;
 	using Interfaces;
 	using VDS.RDF;
 	using VDS.RDF.Ontology;
-	using VDS.RDF.Parsing;
 
 	public class GraphProxy : IGraphProxy
 	{
@@ -32,10 +29,7 @@
 
 		public void SaveChanges()
 		{
-			lock (_lock)
-			{
-				Graph.SaveToFile(HostingEnvironment.MapPath(OntologyPath));
-			}
+			lock (_lock) { Graph.SaveToFile(HostingEnvironment.MapPath(OntologyPath)); }
 		}
 	}
 }

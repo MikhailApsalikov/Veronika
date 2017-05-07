@@ -11,22 +11,17 @@
 
 	public class AccountRepository : SelpRepository<Account, int>, IAccountRepository
 	{
-		public AccountRepository(DbContext dbContext, ISelpConfiguration configuration) : base(dbContext, configuration)
-		{
-		}
+		public AccountRepository(DbContext dbContext, ISelpConfiguration configuration) : base(dbContext, configuration) { }
 
 		public override bool IsRemovingFake => true;
 		public override string FakeRemovingPropertyName => "IsRemoved";
-		public override IDbSet<Account> DbSet => ((UserDbContext)DbContext).Accounts;
+		public override IDbSet<Account> DbSet => ((UserDbContext) DbContext).Accounts;
 
 		public override RepositoryModifyResult<Account> Create(Account entity)
 		{
 			var validator = new AccountCreateValidator(entity, this);
 			validator.Validate();
-			if (!validator.IsValid)
-			{
-				return new RepositoryModifyResult<Account>(validator.Errors);
-			}
+			if (!validator.IsValid) { return new RepositoryModifyResult<Account>(validator.Errors); }
 			return base.Create(entity);
 		}
 
@@ -34,10 +29,7 @@
 		{
 			var validator = new AccountValidator(entity);
 			validator.Validate();
-			if (!validator.IsValid)
-			{
-				return new RepositoryModifyResult<Account>(validator.Errors);
-			}
+			if (!validator.IsValid) { return new RepositoryModifyResult<Account>(validator.Errors); }
 			return base.Update(id, entity);
 		}
 

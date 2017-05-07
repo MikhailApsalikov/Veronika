@@ -4,11 +4,43 @@
 }
 
 @section css{
-
+	<link href="~/Content/detail-page.css" rel="stylesheet"/>
 }
 
 @section scripts{
-
+	<script src="~/AngularApp/Controllers/dissertationCouncilController.js"></script>
 }
 
-<h1>Страница находится в разработке!</h1>
+<div class="detail-page" ng-controller="dissertationCouncilController">
+	<h1>
+		Диссертационный совет "<span ng-bind="data.OrderId"></span>"
+	</h1>
+	<div class="detail-page-properties">
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">URI</div>
+			<div class="detail-page-property-value">
+				<a class="block" ng-href="{{data.Id}}" ng-bind="data.Id"></a>
+			</div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Шифр совета</div>
+			<div class="detail-page-property-value" ng-bind="data.Code"></div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Номер приказа диссертационного совета</div>
+			<div class="detail-page-property-value" ng-bind="data.OrderId"></div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Научная специальность</div>
+			<div class="detail-page-property-value">
+				<a class="block" href="#" ng-click="scientificSpecDetails(data.ScientificSpeciality.Id)">({{data.ScientificSpeciality.Code}}) {{data.ScientificSpeciality.Name}}</a>
+			</div>
+		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">ВУЗ</div>
+			<div class="detail-page-property-value">
+				<a class="block" href="#" ng-click="univDetails(data.University.Id)">{{data.University.Name}}</a>
+			</div>
+		</div>
+	</div>
+</div>

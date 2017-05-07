@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DissertationCouncilRepository.cs" />
     <Compile Include="GraphProxy.cs" />
     <Compile Include="Helpers\SemanticHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

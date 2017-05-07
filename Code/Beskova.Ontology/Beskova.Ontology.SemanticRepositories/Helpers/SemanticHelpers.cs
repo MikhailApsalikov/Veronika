@@ -11,16 +11,9 @@
 		public static int? GetIntProperty(this OntologyResource resource, string propertyName)
 		{
 			var ln = resource.GetProperty(propertyName) as LiteralNode;
-			if (ln == null)
-				return null;
-			try
-			{
-				return (int?) double.Parse(ln.Value);
-			}
-			catch (FormatException)
-			{
-				return null;
-			}
+			if (ln == null) { return null; }
+			try { return (int?) double.Parse(ln.Value); }
+			catch (FormatException) { return null; }
 		}
 
 		public static string GetStringProperty(this OntologyResource resource, string propertyName)
@@ -37,7 +30,10 @@
 		{
 			List<Triple> triples = resource.TriplesWithObject.Where(s => s.Predicate.ToString().EndsWith(propertyName))
 				.ToList();
-			return triples.Select(t => t.Subject).Cast<UriNode>().Select(s => (resource.Graph as OntologyGraph).CreateOntologyResource(s)).ToList();
+			return triples.Select(t => t.Subject)
+				.Cast<UriNode>()
+				.Select(s => (resource.Graph as OntologyGraph).CreateOntologyResource(s))
+				.ToList();
 		}
 
 		// Common

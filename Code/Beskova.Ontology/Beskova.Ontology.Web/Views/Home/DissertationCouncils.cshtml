@@ -4,11 +4,64 @@
 }
 
 @section css{
-
+<link href="~/Content/dissertation-council-filters.css" rel="stylesheet" />
 }
 
 @section scripts{
-
+<script src="~/AngularApp/Controllers/dissertationCouncilsController.js"></script>
 }
 
-<h1>Страница находится в разработке!</h1>
+<div ng-controller="dissertationCouncilsController">
+	<h1>Диссертационные советы</h1>
+	<div ng-if="!isLoaded" layout="row" layout-align="center">
+		<md-progress-circular class="progress-container grid-progress-container" md-mode="indeterminate"></md-progress-circular>
+	</div>
+	<div ng-if="isLoaded">
+		<div class="dissertation-council-filters">
+			<md-input-container class="md-block">
+				<label>Код научной специальности</label>
+				<input type="text" ng-model="filter.ScientificSpecialityCode">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Имя научной специальности</label>
+				<input type="text" ng-model="filter.ScientificSpecialityName">
+			</md-input-container>
+			<md-button class="md-fab md-primary" ng-click="reload()" aria-label="Search">
+				<md-icon md-svg-src="~/node_modules/material-design-icons/action/svg/production/ic_search_24px.svg"></md-icon>
+			</md-button>
+		</div>
+		<table class="grid">
+			<thead class="header">
+				<tr class="item">
+					<th class="grid-item">Шифр совета</th>
+					<th class="grid-item">Код научной специальности</th>
+					<th class="grid-item">Название научной специальности</th>
+					<th class="grid-item">ВУЗ</th>
+					<th class="grid-item">Номер приказа диссертационного совета</th>
+					<th class="grid-item"></th>
+				</tr>
+			</thead>
+			<tbody class="body">
+				<tr class="item" ng-repeat="item in data track by $index">
+					<th class="grid-item" ng-bind="item.Code"></th>
+					<th class="grid-item" ng-bind="item.ScientificSpeciality.Code"></th>
+					<th class="grid-item">
+						<a class="block" href="#" ng-bind="item.ScientificSpeciality.Name" ng-click="scientificSpecDetails(item.ScientificSpeciality.Id)"></a>
+					</th>
+					<th class="grid-item">
+						<a class="block" href="#" ng-bind="item.University.Name" ng-click="univDetails(item.University.Id)"></a>
+					</th>
+					<th class="grid-item" ng-bind="item.OrderId"></th>
+					<th class="grid-item grid-actions">
+						<md-button class="md-fab md-primary" ng-click="details(item.Id)" aria-label="Details">
+							<md-icon md-svg-src="~/node_modules/material-design-icons/action/svg/design/ic_view_list_24px.svg"></md-icon>
+						</md-button>
+						<md-button class="md-fab md-warn" ng-click="remove(item.Id)" ng-if="role !== 'Пользователь'" aria-label="Remove">
+							<md-icon md-svg-src="~/node_modules/material-design-icons/action/svg/production/ic_delete_24px.svg"></md-icon>
+						</md-button>
+					</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

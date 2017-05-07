@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Beskova.Ontology.UnitTests
+﻿namespace Beskova.Ontology.UnitTests
 {
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 	[TestClass]
 	public class SemanticRepositoryTests
 	{

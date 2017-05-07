@@ -185,6 +185,8 @@
     <Content Include="AngularApp\app.js" />
     <Content Include="AngularApp\Controllers\errorController.js" />
     <Content Include="AngularApp\Controllers\loginController.js" />
+    <Content Include="AngularApp\Controllers\dissertationCouncilsController.js" />
+    <Content Include="AngularApp\Controllers\dissertationCouncilController.js" />
     <Content Include="AngularApp\Controllers\specialitiesController.js" />
     <Content Include="AngularApp\Controllers\scientificSpecialitiesController.js" />
     <Content Include="AngularApp\Controllers\specialityController.js" />
@@ -198,6 +200,7 @@
     <Content Include="AngularApp\Services\messageService.js" />
     <Content Include="AngularApp\Services\modalController.js" />
     <Content Include="Content\detail-page.css" />
+    <Content Include="Content\dissertation-council-filters.css" />
     <Content Include="Content\grid.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\main.css" />
@@ -209,6 +212,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiControllers\DissertationCouncilController.cs" />
     <Compile Include="ApiControllers\ScientificSpecialtyController.cs" />
     <Compile Include="ApiControllers\SpecialityController.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
@@ -231,8 +235,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Speciality.cshtml" />
-    <Content Include="Views\Home\Univercities.cshtml" />
-    <Content Include="Views\Home\Univercity.cshtml" />
+    <Content Include="Views\Home\Universities.cshtml" />
+    <Content Include="Views\Home\University.cshtml" />
     <Content Include="Views\Home\UserManagement.cshtml" />
     <Content Include="Views\Home\Specialities.cshtml" />
     <Content Include="Views\Home\ScientificSpeciality.cshtml" />

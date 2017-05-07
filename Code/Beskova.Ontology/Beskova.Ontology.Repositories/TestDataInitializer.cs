@@ -1,6 +1,5 @@
 ﻿namespace Beskova.Ontology.Repositories
 {
-	using System;
 	using System.Collections.Generic;
 	using System.Data.Entity;
 	using System.Linq;
@@ -9,17 +8,11 @@
 
 	public class TestDataInitializer : DropCreateDatabaseIfModelChanges<UserDbContext>
 	{
-		protected override void Seed(UserDbContext context)
-		{
-			InitializeTestAccounts(context);
-		}
+		protected override void Seed(UserDbContext context) { InitializeTestAccounts(context); }
 
 		private void InitializeTestAccounts(UserDbContext context)
 		{
-			if (context.Accounts.Any())
-			{
-				return;
-			}
+			if (context.Accounts.Any()) { return; }
 
 			var accounts = new List<Account>
 			{
