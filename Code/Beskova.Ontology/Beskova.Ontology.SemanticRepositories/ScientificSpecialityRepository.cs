@@ -24,13 +24,35 @@ namespace Beskova.Ontology.SemanticRepositories
 		{
 			return new ScientificSpeciality()
 			{
-				Id = instance.GetId()
+				Id = instance.GetId(),
+				Name = instance.GetStringProperty("label"),
+				Code = instance.GetStringProperty("hasCode")
 			};
 		}
 
 		public List<ScientificSpeciality> GetAll(SpecialityFilter filter)
 		{
-			return base.GetAll();
+			IEnumerable<ScientificSpeciality> result = base.GetAll();
+			if (filter != null)
+			{
+				if (!string.IsNullOrWhiteSpace(filter.SpecialtyCode))
+				{
+					result = result.Where(s => s.Code.Contains(filter.SpecialtyCode));
+				}
+				if (!string.IsNullOrWhiteSpace(filter.SpecialtyName))
+				{
+					result = result.Where(s => s.Code.Contains(filter.SpecialtyName));
+				}
+				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialtyCode))
+				{
+					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialtyCode));
+				}
+				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialtyName))
+				{
+					result = result.Where(s => s.Code.Contains(filter.ScientificSpecialtyName));
+				}
+			}
+			return result.OrderBy(s => s.Name).ToList();
 		}
 
 		public void Remove(string id)

@@ -11,11 +11,11 @@
 		public string Code { get; set; }
 
 		//specialityConsistsOf
-		public List<Speciality> Speciality { get; set; }
+		public List<Speciality> Specialities { get; set; }
 
 		public ScientificSpeciality()
 		{
-			Speciality = new List<Speciality>();
+			Specialities = new List<Speciality>();
 		}
 	}
 }

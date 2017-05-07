@@ -7,14 +7,14 @@
 	{
 		public ScientificSpecialityModel()
 		{
-			Speciality = new List<SpecialityModel>();
+			Specialities = new List<SpecialityModel>();
 		}
 
 		public string Name { get; set; }
 
 		public string Code { get; set; }
 
-		public List<SpecialityModel> Speciality { get; set; }
+		public List<SpecialityModel> Specialities { get; set; }
 		public string Id { get; set; }
 	}
 }
