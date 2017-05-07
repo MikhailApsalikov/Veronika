@@ -1,87 +1,100 @@
-﻿<!DOCTYPE html>
+﻿@{
+	string actionName = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width"/>
 	<title>@ViewBag.Title</title>
-	<link href="~/node_modules/angular/angular-csp.css" rel="stylesheet" />
-	<link href="~/node_modules/angular-material/angular-material.min.css" rel="stylesheet" />
-	<link href="~/Content/main.css" rel="stylesheet" />
-	<link href="~/Content/grid.css" rel="stylesheet" />
+	<link href="~/node_modules/angular/angular-csp.css" rel="stylesheet"/>
+	<link href="~/node_modules/angular-material/angular-material.min.css" rel="stylesheet"/>
+	<link href="~/Content/main.css" rel="stylesheet"/>
+	<link href="~/Content/grid.css" rel="stylesheet"/>
 	@RenderSection("css", true)
 </head>
 <body ng-app="APP">
-	<div layout="column" class="layout" ng-cloak>
-		<section layout="row" flex>
-			<md-sidenav class="md-sidenav-left"
-						md-component-id="left"
-						md-is-locked-open="true"
-						md-whiteframe="4">
+<div layout="column" class="layout" ng-cloak>
+	<section layout="row" flex>
+		<md-sidenav class="md-sidenav-left"
+		            md-component-id="left"
+		            md-is-locked-open="true"
+		            md-whiteframe="4">
 
-				<md-toolbar class="md-theme-indigo">
-					<h1 class="md-toolbar-tools">@ViewBag.Title</h1>
-				</md-toolbar>
-				<md-content flex role="navigation" ng-controller="userOptionsController">
-					<md-list flex="">
-						<md-list-item class="md-3-line">
-							<div class="md-list-item-text" layout="column">
-								<h3 ng-if="isLoggedIn()">{{userName}}</h3>
-								<h4 class="italic">{{role}}</h4>
-							</div>
-						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="navigate('Specialties')">
-							<div class="md-list-item-text" layout="column">
-								<h3>Специальности</h3>
-							</div>
-						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="navigate('Univercities')">
-							<div class="md-list-item-text" layout="column">
-								<h3>ВУЗы</h3>
-							</div>
-						</md-list-item>
-						
-						<md-list-item class="md-3-line" ng-click="navigate('UserManagement')" ng-if="isLoggedIn() && isAdmin()">
-							<div class="md-list-item-text" layout="column">
-								<h3>Управление пользователями</h3>
-							</div>
-						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="exportOwl()">
-							<div class="md-list-item-text" layout="column">
-								<h3>Экспорт онтологии</h3>
-							</div>
-						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="navigate('Login')" ng-if="!isLoggedIn()">
-							<div class="md-list-item-text" layout="column">
-								<h3>Аутентификация</h3>
-							</div>
-						</md-list-item>
-						<md-list-item class="md-3-line" ng-click="logout()" ng-if="isLoggedIn()">
-							<div class="md-list-item-text" layout="column">
-								<h3>Выход из системы</h3>
-							</div>
-						</md-list-item>
-					</md-list>
-				</md-content>
-			</md-sidenav>
-
-			<md-content flex layout-padding>
-				@RenderBody()
+			<md-toolbar class="md-theme-indigo">
+				<h1 class="md-toolbar-tools">@ViewBag.Title</h1>
+			</md-toolbar>
+			<md-content flex role="navigation" ng-controller="userOptionsController">
+				<md-list flex="">
+					<md-list-item class="md-3-line">
+						<div class="md-list-item-text" layout="column"}>
+							<h3 ng-if="isLoggedIn()">{{userName}}</h3>
+							<h4 class="italic">{{role}}</h4>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("Specialt") ? "active" : string.Empty)" ng-click="navigate('Specialties')">
+						<div class="md-list-item-text" layout="column">
+							<h3>Специальности</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("ScientificSpecialt") ? "active" : string.Empty)" ng-click="navigate('ScientificSpecialties')">
+						<div class="md-list-item-text" layout="column">
+							<h3>Научные специальности</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("DissertationCouncil") ? "active" : string.Empty)" ng-click="navigate('DissertationCouncils')">
+						<div class="md-list-item-text" layout="column">
+							<h3>Диссертационные советы</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("Univercit") ? "active" : string.Empty)" ng-click="navigate('Univercities')">
+						<div class="md-list-item-text" layout="column">
+							<h3>ВУЗы</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("UserManagement") ? "active" : string.Empty)" ng-click="navigate('UserManagement')" ng-if="isLoggedIn() && isAdmin()">
+						<div class="md-list-item-text" layout="column">
+							<h3>Управление пользователями</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line" ng-click="exportOwl()">
+						<div class="md-list-item-text" layout="column">
+							<h3>Экспорт онтологии</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("Login") ? "active" : string.Empty)" ng-click="navigate('Login')" ng-if="!isLoggedIn()">
+						<div class="md-list-item-text" layout="column">
+							<h3>Аутентификация</h3>
+						</div>
+					</md-list-item>
+					<md-list-item class="md-3-line" ng-click="logout()" ng-if="isLoggedIn()">
+						<div class="md-list-item-text" layout="column">
+							<h3>Выход из системы</h3>
+						</div>
+					</md-list-item>
+				</md-list>
 			</md-content>
-		</section>
-	</div>
+		</md-sidenav>
 
-	<script src="~/node_modules/angular/angular.js"></script>
-	<script src="~/node_modules/angular-animate/angular-animate.js"></script>
-	<script src="~/node_modules/angular-aria/angular-aria.js"></script>
-	<script src="~/node_modules/angular-material/angular-material.js"></script>
-	<script src="~/AngularApp/app.js"></script>
-	<script src="~/AngularApp/Controllers/userOptionsController.js"></script>
-	<script src="~/AngularApp/Controllers/errorController.js"></script>
-	<script src="~/AngularApp/Services/modalController.js"></script>
-	<script src="~/AngularApp/Services/errorService.js"></script>
-	<script src="~/AngularApp/Services/loginService.js"></script>
-	<script src="~/AngularApp/Services/baseService.js"></script>
-	<script src="~/AngularApp/Services/messageService.js"></script>
-	@RenderSection("scripts", true)
+		<md-content flex layout-padding>
+			@RenderBody()
+		</md-content>
+	</section>
+</div>
+
+<script src="~/node_modules/angular/angular.js"></script>
+<script src="~/node_modules/angular-animate/angular-animate.js"></script>
+<script src="~/node_modules/angular-aria/angular-aria.js"></script>
+<script src="~/node_modules/angular-material/angular-material.js"></script>
+<script src="~/AngularApp/app.js"></script>
+<script src="~/AngularApp/Controllers/userOptionsController.js"></script>
+<script src="~/AngularApp/Controllers/errorController.js"></script>
+<script src="~/AngularApp/Services/modalController.js"></script>
+<script src="~/AngularApp/Services/errorService.js"></script>
+<script src="~/AngularApp/Services/loginService.js"></script>
+<script src="~/AngularApp/Services/baseService.js"></script>
+<script src="~/AngularApp/Services/messageService.js"></script>
+@RenderSection("scripts", true)
 </body>
 </html>

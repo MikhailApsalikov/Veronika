@@ -29,3 +29,13 @@
 .pull-right {
 	float: right;
 }
+
+.md-sidenav-left .active .md-button {
+	background-color: rgba(158,158,158,0.3);
+}
+
+	.md-sidenav-left .active .md-button:hover {
+		background-color: rgba(158,158,158,0.3);
+	}
+
+"

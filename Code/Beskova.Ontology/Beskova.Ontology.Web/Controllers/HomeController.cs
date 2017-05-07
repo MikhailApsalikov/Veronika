@@ -14,7 +14,22 @@
 			return View();
 		}
 
-		public ViewResult SpecialtyEdit()
+		public ViewResult ScientificSpecialties()
+		{
+			return View();
+		}
+
+		public ViewResult ScientificSpecialty()
+		{
+			return View();
+		}
+
+		public ViewResult DissertationCouncils()
+		{
+			return View();
+		}
+
+		public ViewResult DissertationCouncil()
 		{
 			return View();
 		}

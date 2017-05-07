@@ -223,12 +223,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Specialty.cshtml" />
-    <Content Include="Views\Home\SpecialtyEdit.cshtml" />
     <Content Include="Views\Home\Univercities.cshtml" />
     <Content Include="Views\Home\Univercity.cshtml" />
     <Content Include="Views\Home\UserManagement.cshtml" />
     <Content Include="Views\Home\Specialties.cshtml" />
     <Content Include="App_Data\Ontology.owl" />
+    <Content Include="Views\Home\ScientificSpecialty.cshtml" />
+    <Content Include="Views\Home\DissertationCouncil.cshtml" />
+    <Content Include="Views\Home\ScientificSpecialties.cshtml" />
+    <Content Include="Views\Home\DissertationCouncils.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
