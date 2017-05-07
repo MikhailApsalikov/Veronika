@@ -12,7 +12,9 @@
 	public class DissertationCouncilRepository : SemanticRepositoryBase<DissertationCouncil>,
 		IDissertationCouncilRepository
 	{
-		public DissertationCouncilRepository(IGraphProxy graphProxy) : base(graphProxy) { }
+		public DissertationCouncilRepository(IGraphProxy graphProxy) : base(graphProxy)
+		{
+		}
 
 		protected override string EntityName => "dissertationCouncil";
 
@@ -35,7 +37,10 @@
 			return result.OrderBy(s => s.Code).ToList();
 		}
 
-		public void Remove(string id) { throw new NotImplementedException(); }
+		public void Remove(string id)
+		{
+			throw new NotImplementedException();
+		}
 
 		protected override DissertationCouncil Map(OntologyResource instance)
 		{

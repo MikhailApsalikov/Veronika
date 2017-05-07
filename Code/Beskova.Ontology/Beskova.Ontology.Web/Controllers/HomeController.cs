@@ -1,10 +1,10 @@
 ﻿namespace Beskova.Ontology.Web.Controllers
 {
 	using System.Web.Mvc;
-	
+
 	public class HomeController : Controller
 	{
-		public ViewResult Specialities() 
+		public ViewResult Specialities()
 		{
 			return View();
 		}

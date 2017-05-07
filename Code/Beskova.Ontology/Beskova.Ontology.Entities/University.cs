@@ -5,7 +5,10 @@
 
 	public class University : ISelpEntity<string>
 	{
-		public University() { DissertationCouncils = new List<DissertationCouncil>(); }
+		public University()
+		{
+			DissertationCouncils = new List<DissertationCouncil>();
+		}
 
 		public string Name { get; set; }
 

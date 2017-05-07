@@ -11,7 +11,9 @@
 
 	public class SpecialityRepository : SemanticRepositoryBase<Speciality>, ISpecialityRepository
 	{
-		public SpecialityRepository(IGraphProxy graphProxy) : base(graphProxy) { }
+		public SpecialityRepository(IGraphProxy graphProxy) : base(graphProxy)
+		{
+		}
 
 		protected override string EntityName => "Speciality";
 
@@ -42,7 +44,10 @@
 			return result.OrderBy(s => s.Name).ToList();
 		}
 
-		public void Remove(string id) { throw new NotImplementedException(); }
+		public void Remove(string id)
+		{
+			throw new NotImplementedException();
+		}
 
 		protected override Speciality Map(OntologyResource instance)
 		{

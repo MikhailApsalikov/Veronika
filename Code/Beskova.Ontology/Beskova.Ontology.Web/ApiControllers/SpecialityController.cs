@@ -65,10 +65,14 @@
 		private IHttpActionResult HandleException(Exception e)
 		{
 			if (e is NotSupportedException)
+			{
 				return StatusCode(HttpStatusCode.MethodNotAllowed);
+			}
 
 			if (e is EntityNotFoundException)
+			{
 				return NotFound();
+			}
 
 			return InternalServerError(e);
 		}

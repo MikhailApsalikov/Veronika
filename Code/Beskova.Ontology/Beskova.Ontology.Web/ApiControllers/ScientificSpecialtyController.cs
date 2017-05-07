@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Beskova.Ontology.Web.ApiControllers
+﻿namespace Beskova.Ontology.Web.ApiControllers
 {
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
 	using System.Net;
 	using System.Web.Http;
 	using AutoMapper;
@@ -37,7 +36,7 @@ namespace Beskova.Ontology.Web.ApiControllers
 		}
 
 		[HttpGet]
-		public IHttpActionResult Get([FromUri]SpecialityFilter filter)
+		public IHttpActionResult Get([FromUri] SpecialityFilter filter)
 		{
 			try
 			{

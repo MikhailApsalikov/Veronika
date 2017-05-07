@@ -1,48 +1,49 @@
-﻿(function () {
+﻿(function() {
 	"use strict";
 	var angular = window.angular;
 	angular
 		.module("APP")
-		.service("baseService", ["$http", 'errorService', policyService]);
+		.service("baseService", ["$http", "errorService", policyService]);
 
 	function policyService($http, errorService) {
 		return {
-			getList: function (controllerName, params) {
+			getList: function(controllerName, params) {
 				return $http({
 					url: "api/" + controllerName,
 					method: "GET",
 					params: params
-				}).then(function (responce) {
+				}).then(function(responce) {
 					return responce.data;
 				});
 			},
-			getById: function (controllerName, id) {
+			getById: function(controllerName, id) {
 				return $http({
 					url: "api/" + controllerName,
 					method: "GET",
 					params: {
 						id: id
 					}
-				}).then(function (responce) {
+				}).then(function(responce) {
 					return responce.data;
 				});
 			},
-			create: function (controllerName, entity) {
+			create: function(controllerName, entity) {
 				entity = angular.copy(entity);
 				return $http({
 					url: "api/" + controllerName,
 					method: "POST",
 					data: entity
-				}).then(function (responce) {
-					return responce.data;
-				}, function (responce) {
-					if (responce.data.isValid === false) {
-						errorService.open(responce.data.errors);
-						return;
-					}
-				});
+				}).then(function(responce) {
+						return responce.data;
+					},
+					function(responce) {
+						if (responce.data.isValid === false) {
+							errorService.open(responce.data.errors);
+							return;
+						}
+					});
 			},
-			update: function (controllerName, id, entity) {
+			update: function(controllerName, id, entity) {
 				entity = angular.copy(entity);
 				return $http({
 					url: "api/" + controllerName,
@@ -51,16 +52,17 @@
 					params: {
 						id: id
 					}
-				}).then(function (responce) {
-					return responce.data;
-				}, function (responce) {
-					if (responce.data.isValid === false) {
-						errorService.open(responce.data.errors);
-						return;
-					}
-				});
+				}).then(function(responce) {
+						return responce.data;
+					},
+					function(responce) {
+						if (responce.data.isValid === false) {
+							errorService.open(responce.data.errors);
+							return;
+						}
+					});
 			},
-			remove: function (controllerName, id) {
+			remove: function(controllerName, id) {
 				return $http({
 					url: "api/" + controllerName,
 					method: "DELETE",

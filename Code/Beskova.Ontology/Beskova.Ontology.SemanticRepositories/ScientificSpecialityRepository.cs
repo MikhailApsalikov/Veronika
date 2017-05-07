@@ -12,7 +12,9 @@
 	public class ScientificSpecialityRepository : SemanticRepositoryBase<ScientificSpeciality>,
 		IScientificSpecialityRepository
 	{
-		public ScientificSpecialityRepository(IGraphProxy graphProxy) : base(graphProxy) { }
+		public ScientificSpecialityRepository(IGraphProxy graphProxy) : base(graphProxy)
+		{
+		}
 
 		protected override string EntityName => "ScientificSpeciality";
 
@@ -43,7 +45,10 @@
 			return result.OrderBy(s => s.Name).ToList();
 		}
 
-		public void Remove(string id) { throw new NotImplementedException(); }
+		public void Remove(string id)
+		{
+			throw new NotImplementedException();
+		}
 
 		protected override ScientificSpeciality Map(OntologyResource instance)
 		{

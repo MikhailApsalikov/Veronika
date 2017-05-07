@@ -1,43 +1,27 @@
-﻿.layout {
-	height: 100%;
-}
+﻿.layout { height: 100%; }
 
-.italic {
-	font-style: italic;
-}
+.italic { font-style: italic; }
 
-.modal-header {
-	text-align: center;
-}
+.modal-header { text-align: center; }
 
 .modal-container {
 	margin: 20px 50px;
 	width: 450px;
 }
 
-	.modal-container md-input-container.md-block {
-		width: 95%;
-	}
+.modal-container md-input-container.md-block { width: 95%; }
 
 
 .authorization-error {
 	color: red;
-	text-align: center;
 	margin-top: 100px;
+	text-align: center;
 }
 
-.pull-right {
-	float: right;
-}
+.pull-right { float: right; }
 
-.md-sidenav-left .active .md-button {
-	background-color: rgba(158,158,158,0.3);
-}
+.md-sidenav-left .active .md-button { background-color: rgba(158, 158, 158, 0.3); }
 
-	.md-sidenav-left .active .md-button:hover {
-		background-color: rgba(158,158,158,0.3);
-	}
+.md-sidenav-left .active .md-button:hover { background-color: rgba(158, 158, 158, 0.3); }
 
-.block {
-	display: block;
-}
+.block { display: block; }

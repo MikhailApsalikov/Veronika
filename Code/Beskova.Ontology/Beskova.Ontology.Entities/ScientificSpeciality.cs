@@ -5,7 +5,10 @@
 
 	public class ScientificSpeciality : ISelpEntity<string>
 	{
-		public ScientificSpeciality() { Specialities = new List<Speciality>(); }
+		public ScientificSpeciality()
+		{
+			Specialities = new List<Speciality>();
+		}
 
 		public string Name { get; set; }
 

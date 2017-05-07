@@ -29,7 +29,10 @@
 
 		public void SaveChanges()
 		{
-			lock (_lock) { Graph.SaveToFile(HostingEnvironment.MapPath(OntologyPath)); }
+			lock (_lock)
+			{
+				Graph.SaveToFile(HostingEnvironment.MapPath(OntologyPath));
+			}
 		}
 	}
 }

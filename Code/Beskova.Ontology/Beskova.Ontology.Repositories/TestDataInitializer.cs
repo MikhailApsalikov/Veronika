@@ -8,11 +8,17 @@
 
 	public class TestDataInitializer : DropCreateDatabaseIfModelChanges<UserDbContext>
 	{
-		protected override void Seed(UserDbContext context) { InitializeTestAccounts(context); }
+		protected override void Seed(UserDbContext context)
+		{
+			InitializeTestAccounts(context);
+		}
 
 		private void InitializeTestAccounts(UserDbContext context)
 		{
-			if (context.Accounts.Any()) { return; }
+			if (context.Accounts.Any())
+			{
+				return;
+			}
 
 			var accounts = new List<Account>
 			{

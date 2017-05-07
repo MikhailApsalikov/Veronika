@@ -1,11 +1,10 @@
 ﻿.dissertation-council-filters {
+	align-items: center;
 	display: flex;
 	width: 100%;
-	align-items: center;
 }
 
-	.dissertation-council-filters .md-block {
-		width: 40%;
-		margin: 0 10px;
-	}
-
+.dissertation-council-filters .md-block {
+	margin: 0 10px;
+	width: 40%;
+}

@@ -21,7 +21,7 @@
 			window.location = "/" + route;
 		};
 
-		$scope.exportOwl = function () {
+		$scope.exportOwl = function() {
 			window.location = "/api/export";
 		};
 

@@ -1,19 +1,9 @@
-﻿.user-management-grid {
-	
-}
+﻿.user-management-grid { }
 
-.user-management-grid-id {
-	width: 10%	
-}
+.user-management-grid-id { width: 10% }
 
-.user-management-grid-name {
-	width: 30%	
-}
+.user-management-grid-name { width: 30% }
 
-.user-management-grid-role {
-	width: 20%
-}
+.user-management-grid-role { width: 20% }
 
-.user-management-grid-buttons {
-	width: 40%;
-}
+.user-management-grid-buttons { width: 40%; }

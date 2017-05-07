@@ -11,9 +11,18 @@
 		public static int? GetIntProperty(this OntologyResource resource, string propertyName)
 		{
 			var ln = resource.GetProperty(propertyName) as LiteralNode;
-			if (ln == null) { return null; }
-			try { return (int?) double.Parse(ln.Value); }
-			catch (FormatException) { return null; }
+			if (ln == null)
+			{
+				return null;
+			}
+			try
+			{
+				return (int?) double.Parse(ln.Value);
+			}
+			catch (FormatException)
+			{
+				return null;
+			}
 		}
 
 		public static string GetStringProperty(this OntologyResource resource, string propertyName)

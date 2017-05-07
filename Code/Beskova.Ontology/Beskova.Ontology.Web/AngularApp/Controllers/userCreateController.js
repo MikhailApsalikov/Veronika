@@ -1,16 +1,17 @@
-﻿(function () {
-	'use strict';
+﻿(function() {
+	"use strict";
 	var angular = window.angular;
 	angular
-      .module('APP')
-      .controller('userCreateController', ['$scope', '$mdDialog', 'data', userCreateController]);
+		.module("APP")
+		.controller("userCreateController", ["$scope", "$mdDialog", "data", userCreateController]);
 
-	function userCreateController($scope, $mdDialog, data) {;
-		$scope.cancel = function () {
+	function userCreateController($scope, $mdDialog, data) {
+		;
+		$scope.cancel = function() {
 			$mdDialog.cancel();
 		};
 
-		$scope.ok = function () {
+		$scope.ok = function() {
 			$mdDialog.hide({
 				Name: $scope.login,
 				Password: $scope.password,

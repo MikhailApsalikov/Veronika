@@ -1,6 +1,4 @@
-﻿.detail-page-properties {
-	margin-top: 50px;
-}
+﻿.detail-page-properties { margin-top: 50px; }
 
 .detail-page-property {
 	display: flex;
@@ -8,16 +6,12 @@
 }
 
 .detail-page-property-key {
-	width: 30%;
-	text-align: right;
 	font-weight: bold;
 	margin-right: 25px;
+	text-align: right;
+	width: 30%;
 }
 
-.detail-page-property-key:after {
-	content: ":";
-}
+.detail-page-property-key:after { content: ":"; }
 
-.detail-page-property-value {
-	width: 80%;
-}
+.detail-page-property-value { width: 80%; }

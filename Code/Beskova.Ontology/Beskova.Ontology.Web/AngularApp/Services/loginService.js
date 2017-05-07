@@ -1,4 +1,4 @@
-﻿(function () {
+﻿(function() {
 	"use strict";
 	var angular = window.angular;
 	angular
@@ -7,12 +7,12 @@
 
 	function loginService($http, errorService) {
 		return {
-			login: function (loginData) {
+			login: function(loginData) {
 				return $http({
 					url: "api/user/login",
 					method: "POST",
 					data: loginData
-				}).then(function (responce) {
+				}).then(function(responce) {
 					if (!responce.data.IsValid) {
 						errorService.open(responce.data.Errors);
 						return;
@@ -21,11 +21,11 @@
 					window.location = "/";
 				});
 			},
-			logout: function () {
+			logout: function() {
 				delete window.localStorage.user;
 				window.location.reload();
 			},
-			getUserInfo: function () {
+			getUserInfo: function() {
 				if (window.localStorage.user) {
 					return JSON.parse(window.localStorage.user);
 				}
@@ -34,9 +34,9 @@
 				};
 			},
 			roles: [
-				'Пользователь',
-				'Администрация министерства',
-				'Администратор'
+				"Пользователь",
+				"Администрация министерства",
+				"Администратор"
 			]
 		};
 	}

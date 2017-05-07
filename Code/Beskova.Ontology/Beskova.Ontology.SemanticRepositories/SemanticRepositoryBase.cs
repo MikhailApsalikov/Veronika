@@ -24,7 +24,10 @@
 			return ontClass.Instances.Select(Map).ToList();
 		}
 
-		public virtual TEntity GetById(string id) { return GetAll().FirstOrDefault(s => s.Id == id); }
+		public virtual TEntity GetById(string id)
+		{
+			return GetAll().FirstOrDefault(s => s.Id == id);
+		}
 
 		protected virtual OntologyClass GetClass(string name)
 		{
