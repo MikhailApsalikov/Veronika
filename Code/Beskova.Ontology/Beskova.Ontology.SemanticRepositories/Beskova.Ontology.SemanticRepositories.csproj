@@ -86,10 +86,6 @@
       <Project>{c389b2a7-391e-48ae-9ad8-a4a7a3f171f7}</Project>
       <Name>Beskova.Ontology.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Beskova.Ontology.Validators\Beskova.Ontology.Validators.csproj">
-      <Project>{d0ba3e13-2be8-4c46-9d92-78d6c3a2e9b8}</Project>
-      <Name>Beskova.Ontology.Validators</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

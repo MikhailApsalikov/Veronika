@@ -79,10 +79,6 @@
       <Project>{C389B2A7-391E-48AE-9AD8-A4A7A3F171F7}</Project>
       <Name>Beskova.Ontology.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Beskova.Ontology.Repositories\Beskova.Ontology.Repositories.csproj">
-      <Project>{5fd9f660-00fa-4b8f-a832-3001cf74c355}</Project>
-      <Name>Beskova.Ontology.Repositories</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Beskova.Ontology.SemanticRepositories\Beskova.Ontology.SemanticRepositories.csproj">
       <Project>{43fe0180-1c40-4f64-b38e-c3b74d85c6e2}</Project>
       <Name>Beskova.Ontology.SemanticRepositories</Name>
