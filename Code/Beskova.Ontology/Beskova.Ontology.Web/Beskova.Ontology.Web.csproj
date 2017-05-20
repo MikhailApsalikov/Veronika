@@ -254,6 +254,7 @@
     <Content Include="App_Data\ontology-src.owl" />
     <Content Include="App_Data\ontology.owl" />
     <Content Include="Views\Home\Upload.cshtml" />
+    <Content Include="Files\Dokument_Acrobat.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
