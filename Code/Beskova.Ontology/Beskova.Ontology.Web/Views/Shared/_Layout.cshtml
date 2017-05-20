@@ -58,6 +58,11 @@
 							<h3>Управление пользователями</h3>
 						</div>
 					</md-list-item>
+					<md-list-item class="md-3-line @(actionName.StartsWith("Upload") ? "active" : string.Empty)" ng-click="navigate('Upload')" ng-if="isLoggedIn() && isMinistryAdmin()">
+						<div class="md-list-item-text" layout="column">
+							<h3>Импорт RDF</h3>
+						</div>
+					</md-list-item>
 					<md-list-item class="md-3-line" ng-click="exportOwl()">
 						<div class="md-list-item-text" layout="column">
 							<h3>Экспорт онтологии</h3>

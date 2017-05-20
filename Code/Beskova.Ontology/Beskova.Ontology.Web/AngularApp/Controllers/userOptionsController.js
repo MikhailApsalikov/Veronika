@@ -17,6 +17,10 @@
 			return $scope.role === loginService.roles[2];
 		};
 
+		$scope.isMinistryAdmin = function() {
+			return $scope.role === loginService.roles[1];
+		};
+
 		$scope.navigate = function(route) {
 			window.location = "/" + route;
 		};
