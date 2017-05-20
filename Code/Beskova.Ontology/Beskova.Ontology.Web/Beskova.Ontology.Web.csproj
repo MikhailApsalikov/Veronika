@@ -47,6 +47,7 @@
       <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="dotNetRDF, Version=1.0.12.0, Culture=neutral, PublicKeyToken=6055ffe4c97cc780" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -218,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiControllers\DissertationCouncilController.cs" />
+    <Compile Include="ApiControllers\RdfController.cs" />
     <Compile Include="ApiControllers\ScientificSpecialtyController.cs" />
     <Compile Include="ApiControllers\SpecialityController.cs" />
     <Compile Include="ApiControllers\UniversityController.cs" />

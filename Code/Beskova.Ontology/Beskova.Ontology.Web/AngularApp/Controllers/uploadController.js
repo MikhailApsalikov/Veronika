@@ -4,13 +4,22 @@
 	angular
 		.module("APP")
 		.controller("uploadController",
-			["$scope", "loginService", uploadController]);
+			["$scope", "loginService", "baseService", "messageService", uploadController]);
 
-	function uploadController($scope, loginService) {
+	function uploadController($scope, loginService, baseService, messageService) {
 		$scope.role = null;
 
 		$scope.isPageVisible = function() {
 			return $scope.role === loginService.roles[1];
+		};
+
+		$scope.uploadFile = function(files) {
+			baseService.uploadFile(files[0], "/api/rdf/import").then(function(data) {
+					messageService.show("Файл успешно загружен! Загружено " + data.data + " RDF-триплетов");
+				},
+				function (data) {
+					messageService.show("Ошибка при загрузке файла: " + data.data.Message);
+				});
 		};
 
 		function updateUserInfo() {
