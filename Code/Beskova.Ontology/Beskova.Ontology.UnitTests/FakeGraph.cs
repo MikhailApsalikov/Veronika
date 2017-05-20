@@ -8,6 +8,7 @@
 
 	internal class FakeGraph : IGraphProxy
 	{
+		private IGraphProxy graphProxyImplementation;
 		public OntologyGraph Graph { get; private set; }
 
 		public void LoadGraph()
@@ -24,6 +25,11 @@
 
 		public void SaveChanges()
 		{
+		}
+
+		public int AddTripplesFromStream(Stream stream)
+		{
+			return 0;
 		}
 	}
 }

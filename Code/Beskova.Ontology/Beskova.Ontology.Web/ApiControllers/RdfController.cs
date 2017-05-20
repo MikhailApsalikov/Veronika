@@ -1,18 +1,9 @@
 ﻿namespace Beskova.Ontology.Web.ApiControllers
 {
 	using System;
-	using System.Collections.Generic;
-	using System.IO;
-	using System.Linq;
-	using System.Net;
-	using System.Net.Http;
-	using System.Text;
-	using System.Threading.Tasks;
 	using System.Web;
 	using System.Web.Http;
 	using Interfaces;
-	using VDS.RDF;
-	using VDS.RDF.Parsing;
 
 	public class RdfController : ApiController
 	{
@@ -28,14 +19,12 @@
 		{
 			try
 			{
-				using (var reader = new StreamReader(HttpContext.Current.Request.Files[0].InputStream, Encoding.UTF8))
+				if (HttpContext.Current.Request.Files.AllKeys.Length < 1)
 				{
-					IGraph graph = new Graph();
-					graph.LoadFromString(reader.ReadToEnd(), new RdfXmlParser());
-					IEnumerable<Triple> tripples = new List<Triple>();
-					graphProxy.Graph.Assert(tripples);
-					return Ok(tripples.Count());
+					throw new ArgumentException("Не указан файл!");
 				}
+
+				return Ok(graphProxy.AddTripplesFromStream(HttpContext.Current.Request.Files[0].InputStream));
 			}
 			catch (Exception e)
 			{
