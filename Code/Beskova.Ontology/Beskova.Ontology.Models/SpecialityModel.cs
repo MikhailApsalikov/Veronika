@@ -15,6 +15,8 @@
 		public string Code { get; set; }
 
 		public List<ScientificSpecialityModel> ScientificSpecialities { get; set; }
+
+		public List<string> EducationLevel { get; set; }
 		public string Id { get; set; }
 	}
 }

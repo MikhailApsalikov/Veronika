@@ -21,6 +21,7 @@
 		public List<ScientificSpeciality> GetAll(SpecialityFilter filter)
 		{
 			IEnumerable<ScientificSpeciality> result = base.GetAll();
+
 			if (filter != null)
 			{
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityCode))

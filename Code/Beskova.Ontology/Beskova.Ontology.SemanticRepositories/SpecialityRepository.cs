@@ -11,6 +11,8 @@
 
 	public class SpecialityRepository : SemanticRepositoryBase<Speciality>, ISpecialityRepository
 	{
+		private const string PostgraduateEducationLevel = "аспирантура";
+
 		public SpecialityRepository(IGraphProxy graphProxy) : base(graphProxy)
 		{
 		}
@@ -20,6 +22,7 @@
 		public List<Speciality> GetAll(SpecialityFilter filter)
 		{
 			IEnumerable<Speciality> result = base.GetAll();
+			result = result.Where(s => s.EducationLevel.Any(el => el.ToUpperInvariant() == PostgraduateEducationLevel.ToUpperInvariant()));
 			if (filter != null)
 			{
 				if (!string.IsNullOrWhiteSpace(filter.SpecialityCode))
@@ -59,6 +62,9 @@
 						Name = s.GetStringProperty("label"),
 						Code = s.GetStringProperty("hasCode")
 					})
+					.ToList(),
+				EducationLevel = instance.GetObjectProperties("hasLevelEducation")
+					.Select(level => GraphProxy.Graph.CreateOntologyResource(level).GetStringProperty("label"))
 					.ToList()
 			};
 
