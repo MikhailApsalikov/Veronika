@@ -12,14 +12,14 @@
 }
 
 <div ng-controller="specialitiesController">
-	<h1>Cпециальности</h1>
+	<h1>Направления подготовки научно-педагогических кадров в аспирантуре</h1>
 	<div ng-if="!isLoaded" layout="row" layout-align="center">
 		<md-progress-circular class="progress-container grid-progress-container" md-mode="indeterminate"></md-progress-circular>
 	</div>
 	<div ng-if="isLoaded">
 		<div class="speciality-filters">
 			<md-input-container class="md-block">
-				<label>Код специальности</label>
+				<label>Код направления подготовки научно-педагогических кадров в аспирантуре</label>
 				<input type="text" ng-model="filter.SpecialityCode">
 			</md-input-container>
 			<md-input-container class="md-block">
@@ -27,7 +27,7 @@
 				<input type="text" ng-model="filter.ScientificSpecialityCode">
 			</md-input-container>
 			<md-input-container class="md-block">
-				<label>Имя специальности</label>
+				<label>Имя направления подготовки научно-педагогических кадров в аспирантуре</label>
 				<input type="text" ng-model="filter.SpecialityName">
 			</md-input-container>
 			<md-input-container class="md-block">

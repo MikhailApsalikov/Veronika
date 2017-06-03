@@ -25,3 +25,7 @@
 .md-sidenav-left .active .md-button:hover { background-color: rgba(158, 158, 158, 0.3); }
 
 .block { display: block; }
+
+.no-ellipsis {
+	white-space: normal !important;
+} 

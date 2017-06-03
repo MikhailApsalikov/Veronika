@@ -31,7 +31,7 @@
 		$scope.remove = function(id) {
 			service.remove("speciality", id).then(function() {
 				$scope.reload();
-				messageService.show("Специальность успешно удалена");
+				messageService.show("Направление подготовки научно-педагогических кадров в аспирантуре успешно удалено");
 			});
 		};
 
