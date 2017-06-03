@@ -32,5 +32,11 @@
 				<a class="block" href="#" ng-repeat="speciality in data.Specialities track by $index" ng-click="specDetails(speciality.Id)">({{speciality.Code}}) {{speciality.Name}}</a>
 			</div>
 		</div>
+		<div class="detail-page-property">
+			<div class="detail-page-property-key">Диссертационные советы</div>
+			<div class="detail-page-property-value">
+				<a class="block" href="#" ng-repeat="dissertationCouncil in data.DissertationCouncils track by $index" ng-click="dissertationCouncilDetails(dissertationCouncil.Id)">({{dissertationCouncil.Code}}) {{dissertationCouncil.Name}}</a>
+			</div>
+		</div>
 	</div>
 </div>

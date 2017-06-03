@@ -62,7 +62,12 @@
 					})
 					.ToList()
 			};
-
+			
+			entity.DissertationCouncils = instance.GetSubjectsByObjectProperty("associatedWith").Select(s => new DissertationCouncil()
+			{
+				Id = s.GetId(),
+				Code = s.GetStringProperty("hasCode")
+			}).ToList();
 
 			return entity;
 		}

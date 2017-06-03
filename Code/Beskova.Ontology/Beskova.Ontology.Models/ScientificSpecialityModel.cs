@@ -15,6 +15,8 @@
 		public string Code { get; set; }
 
 		public List<SpecialityModel> Specialities { get; set; }
+
+		public List<DissertationCouncilModel> DissertationCouncils { get; set; }
 		public string Id { get; set; }
 	}
 }

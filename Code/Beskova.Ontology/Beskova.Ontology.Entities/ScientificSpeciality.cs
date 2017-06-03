@@ -17,6 +17,9 @@
 		//specialityConsistsOf
 		public List<Speciality> Specialities { get; set; }
 
+		//associatedWith
+		public List<DissertationCouncil> DissertationCouncils { get; set; }
+
 		public string Id { get; set; }
 	}
 }

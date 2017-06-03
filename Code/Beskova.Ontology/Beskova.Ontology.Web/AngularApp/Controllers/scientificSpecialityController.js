@@ -22,6 +22,10 @@
 			window.location.href = "/Speciality#id=" + id;
 		};
 
+		$scope.dissertationCouncilDetails = function (id) {
+			window.location.href = "/DissertationCouncil#id=" + id;
+		};
+
 		function getId() {
 			try {
 				return /\#id=(.*)/.exec(window.location.hash)[1];
