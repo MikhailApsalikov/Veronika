@@ -1,1 +1,7 @@
-﻿
+﻿.list {
+	margin-bottom: 30px;
+}
+
+.list li{
+	margin-bottom: 10px;
+}

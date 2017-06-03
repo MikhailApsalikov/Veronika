@@ -4,7 +4,7 @@
 }
 
 @section css{
-	<link href="~/Content/upload.css" rel="stylesheet"/>
+	<link href="~/Content/upload.css" rel="stylesheet" />
 }
 
 @section scripts{
@@ -14,7 +14,23 @@
 <div ng-controller="uploadController">
 	<div ng-if="isPageVisible()">
 		<h1>Загрузка RDF-триплетов</h1>
-		<p>Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. Описание валидации. </p>
+		<p>
+			<h3>Загружаемый RDF-набор должен отвечать следующим требованиям:</h3>
+			<ul class="list">
+				<li>
+					<strong>Класс Speciality</strong> - направление подготовки научно-педагогических кадров. Имеет код hasCode и название hasName. Класс Speciality specialityConsistsOf соответствует Научной специальности ScientficSpeciality. Обязательно дожен иметь hasLevelEducation = аспирантура.
+</li>
+				<li>
+					<strong>ScientficSpeciality</strong> - отвечает за описание научных специальностей. Имеет код hasCode и название hasName. Класс ScientificSpeciality научные специальности isPartOfSpeciality соответствует направлению подготовки научно-педагогических кадров Speciality. Данный класс связан с классом University с помощью свойства IsIn.
+				</li>
+				<li>
+					<strong>dissertationCouncil</strong> - отвечает за описание диссертационных советов. Имеет код hasCode, номер приказа hasOrderNumber. Класс dissertationCouncil связан с классом научные специальности ScientificSpeciality с помощью свойства associatedWith. Класс dissertationCouncil связан с классом University с помощью свойства createdIn.
+</li>
+				<li>
+					<strong>University</strong> - отвечает за описание университета.
+</li>
+			</ul>
+		</p>
 		<form action="~/api/rdf/import" enctype="multipart/form-data" method="post">
 			<input type="file" name="rdf" onchange="angular.element(this).scope().uploadFile(this.files)">
 		</form>
