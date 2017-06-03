@@ -33,7 +33,7 @@
 		<div class="detail-page-property">
 			<div class="detail-page-property-key">Научная специальность</div>
 			<div class="detail-page-property-value">
-				<a class="block" href="#" ng-click="scientificSpecDetails(data.ScientificSpeciality.Id)">({{data.ScientificSpeciality.Code}}) {{data.ScientificSpeciality.Name}}</a>
+				<a class="block" href="#" ng-repeat="ss in data.ScientificSpecialities track by $index" ng-click="scientificSpecDetails(ss.Id)">({{ss.Code}}) {{ss.Name}}</a>
 			</div>
 		</div>
 		<div class="detail-page-property">

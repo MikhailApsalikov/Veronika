@@ -25,13 +25,11 @@
 			{
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityCode))
 				{
-					result = result.Where(s => s.ScientificSpeciality.Code.ToUpperInvariant()
-						.Contains(filter.ScientificSpecialityCode.ToUpperInvariant()));
+					result = result.Where(s => s.ScientificSpecialities.Any(ss=>ss.Code.ToUpperInvariant().Contains(filter.ScientificSpecialityCode.ToUpperInvariant())));
 				}
 				if (!string.IsNullOrWhiteSpace(filter.ScientificSpecialityName))
 				{
-					result = result.Where(s => s.ScientificSpeciality.Name.ToUpperInvariant()
-						.Contains(filter.ScientificSpecialityName.ToUpperInvariant()));
+					result = result.Where(s => s.ScientificSpecialities.Any(ss => ss.Name.ToUpperInvariant().Contains(filter.ScientificSpecialityName.ToUpperInvariant())));
 				}
 			}
 			return result.OrderBy(s => s.Code).ToList();
@@ -43,20 +41,17 @@
 			{
 				Id = instance.GetId(),
 				OrderId = instance.GetStringProperty("hasOrderNumber"),
-				Code = instance.GetStringProperty("hasCode")
+				Code = instance.GetStringProperty("hasCode"),
+				ScientificSpecialities = instance.GetObjectProperties("associatedWith")
+					.Select(s => GraphProxy.Graph.CreateOntologyResource(s))
+					.Select(s => new ScientificSpeciality()
+					{
+						Id = s.GetId(),
+						Name = s.GetStringProperty("label"),
+						Code = s.GetStringProperty("hasCode")
+					})
+					.ToList()
 			};
-			List<OntologyResource> scientificSpecialities = instance.GetObjectProperties("associatedWith")
-				.Select(s => GraphProxy.Graph.CreateOntologyResource(s))
-				.ToList();
-			if (scientificSpecialities.Any())
-			{
-				entity.ScientificSpeciality = new ScientificSpeciality
-				{
-					Id = scientificSpecialities[0].GetId(),
-					Name = scientificSpecialities[0].GetStringProperty("label"),
-					Code = scientificSpecialities[0].GetStringProperty("hasCode")
-				};
-			}
 
 			List<OntologyResource> universities = instance.GetObjectProperties("createdIn")
 				.Select(s => GraphProxy.Graph.CreateOntologyResource(s))

@@ -1,5 +1,6 @@
 ﻿namespace Beskova.Ontology.Entities
 {
+	using System.Collections.Generic;
 	using Selp.Interfaces;
 
 	public class DissertationCouncil : ISelpEntity<string>
@@ -14,7 +15,7 @@
 		public University University { get; set; }
 
 		//associatedWith
-		public ScientificSpeciality ScientificSpeciality { get; set; }
+		public List<ScientificSpeciality> ScientificSpecialities { get; set; }
 
 		public string Id { get; set; }
 	}

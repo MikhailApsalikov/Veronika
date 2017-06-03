@@ -34,8 +34,7 @@
 			<thead class="header">
 			<tr class="item">
 				<th class="grid-item">Шифр совета</th>
-				<th class="grid-item">Код научной специальности</th>
-				<th class="grid-item">Название научной специальности</th>
+				<th class="grid-item">Научная специальность</th>
 				<th class="grid-item">ВУЗ</th>
 				<th class="grid-item">Номер приказа диссертационного совета</th>
 				<th class="grid-item"></th>
@@ -44,9 +43,8 @@
 			<tbody class="body">
 			<tr class="item" ng-repeat="item in data track by $index">
 				<th class="grid-item" ng-bind="item.Code"></th>
-				<th class="grid-item" ng-bind="item.ScientificSpeciality.Code"></th>
 				<th class="grid-item">
-					<a class="block" href="#" ng-bind="item.ScientificSpeciality.Name" ng-click="scientificSpecDetails(item.ScientificSpeciality.Id)"></a>
+					<a class="block" href="#" ng-repeat="ss in item.ScientificSpecialities track by $index" ng-click="scientificSpecDetails(ss.Id)">({{ss.Code}}) {{ss.Name}}</a>
 				</th>
 				<th class="grid-item">
 					<a class="block" href="#" ng-bind="item.University.Name" ng-click="univDetails(item.University.Id)"></a>
